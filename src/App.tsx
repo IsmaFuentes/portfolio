@@ -6,7 +6,7 @@ import NavigationBar from "./components/NavigationBar";
 
 function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-gradient-to-br from-blue-950 via-black to-cyan-950 text-white min-h-screen">
       <NavigationBar />
       <Routes>
         <Route path="/" element={<About />} />

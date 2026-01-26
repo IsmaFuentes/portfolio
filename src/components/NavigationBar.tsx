@@ -1,17 +1,28 @@
+import { Link } from "react-router-dom";
+
 function NavigationBar() {
   return (
-    <div className="flex flex-row items-center justify-center py-10 md:py-12 max-w-5xl mx-auto relative z-[100] px-4 md:px-8">
+    <div className="flex flex-row items-center justify-center py-6 md:py-6 max-w-5xl mx-auto relative z-[100] px-4 md:px-8">
       <div className="w-full flex justify-center">
-        <div className="flex flex-row space-x-4 md:space-x-8 items-center antialiased border px-3 md:px-4 py-3 rounded-2xl border-zinc-700/60 bg-zinc-800/80 backdrop-blur-md">
-          <a href="/" className="text-xs md:text-sm hover:text-zinc-300 transition-colors">
+        <div className="flex flex-row space-x-2 items-center antialiased border px-3 md:px-2 py-3 rounded-2xl border-blue-800/60 bg-blue-950/80 backdrop-blur-md shadow-lg shadow-blue-950/50">
+          <Link
+            to="/"
+            className="text-xs md:text-sm hover:text-cyan-300 transition-colors px-6 md:px-8 py-2"
+          >
             Sobre mí
-          </a>
-          <a href="/experience" className="text-xs md:text-sm hover:text-zinc-300 transition-colors whitespace-nowrap">
+          </Link>
+          <Link
+            to="/experience"
+            className="text-xs md:text-sm hover:text-cyan-300 transition-colors whitespace-nowrap px-6 md:px-8 py-2"
+          >
             Experiencia
-          </a>
-          <a href="/projects" className="text-xs md:text-sm hover:text-zinc-300 transition-colors">
+          </Link>
+          <Link
+            to="/projects"
+            className="text-xs md:text-sm hover:text-cyan-300 transition-colors px-6 md:px-8 py-2"
+          >
             Proyectos
-          </a>
+          </Link>
         </div>
       </div>
     </div>

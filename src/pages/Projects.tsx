@@ -62,11 +62,11 @@ function Projects() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
       <div className="max-w-6xl mx-auto px-8 py-20">
         {/* Header */}
         <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-zinc-100 to-zinc-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">
             Proyectos Destacados
           </h1>
           <p className="text-zinc-400 text-lg">
@@ -79,14 +79,14 @@ function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8 hover:border-zinc-700 transition-all duration-300 group flex flex-col"
+              className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300 group flex flex-col"
             >
               {/* Category & Status */}
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
                   {project.category}
                 </span>
-                <span className="px-3 py-1 bg-zinc-800/50 border border-zinc-700/50 rounded-full text-xs text-zinc-400">
+                <span className="px-3 py-1 bg-blue-900/30 border border-blue-800/50 rounded-full text-xs text-cyan-300">
                   {project.status}
                 </span>
               </div>
@@ -128,12 +128,12 @@ function Projects() {
               </div>
 
               {/* Tech Stack */}
-              <div className="pt-4 border-t border-zinc-800">
+              <div className="pt-4 border-t border-blue-900/50">
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-zinc-800/50 border border-zinc-700/50 rounded-lg text-xs text-zinc-400"
+                      className="px-3 py-1 bg-blue-900/30 border border-blue-800/50 rounded-lg text-xs text-cyan-200"
                     >
                       {tech}
                     </span>

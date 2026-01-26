@@ -16,11 +16,11 @@ function About() {
   const categories = Array.from(new Set(technologies.map((t) => t.category)));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-black to-zinc-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
       <div className="max-w-5xl mx-auto px-8 py-20">
         {/* Hero Section */}
         <div className="mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zinc-100 via-zinc-200 to-zinc-400 bg-clip-text text-transparent animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
             Ismael Fuentes Sintes
           </h1>
           <p className="text-xl md:text-2xl text-zinc-400 font-light mb-6">
@@ -33,7 +33,7 @@ function About() {
               href="https://es.linkedin.com/in/ismael-fuentes-sintes-992736191"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-4 py-2 bg-zinc-900/50 border border-zinc-800 rounded-lg hover:border-blue-500/50 hover:bg-zinc-800/50 transition-all duration-300"
+              className="group flex items-center gap-2 px-4 py-2 bg-blue-950/30 border border-blue-900/50 rounded-lg hover:border-blue-500/50 hover:bg-blue-900/30 transition-all duration-300"
             >
               <svg
                 className="w-5 h-5 text-zinc-400 group-hover:text-blue-400 transition-colors"
@@ -51,7 +51,7 @@ function About() {
               href="https://github.com/IsmaFuentes"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-4 py-2 bg-zinc-900/50 border border-zinc-800 rounded-lg hover:border-zinc-600 hover:bg-zinc-800/50 transition-all duration-300"
+              className="group flex items-center gap-2 px-4 py-2 bg-blue-950/30 border border-blue-900/50 rounded-lg hover:border-cyan-600 hover:bg-blue-900/30 transition-all duration-300"
             >
               <svg
                 className="w-5 h-5 text-zinc-400 group-hover:text-zinc-100 transition-colors"
@@ -69,10 +69,8 @@ function About() {
 
         {/* About Section */}
         <div className="space-y-8 mb-20">
-          <div className="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8 hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-800/50 transition-all duration-300 group">
-            <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-zinc-100 to-zinc-300 bg-clip-text text-transparent">
-              Sobre mí
-            </h2>
+          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300 group">
+            <h2 className="text-2xl font-semibold mb-4 text-white">Sobre mí</h2>
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
                 Desarrollador .NET especializado en backend y aplicaciones de
@@ -95,8 +93,8 @@ function About() {
         </div>
 
         {/* Technologies Section */}
-        <div className="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-2xl p-8 hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-800/50 transition-all duration-300">
-          <h2 className="text-2xl font-semibold mb-8 bg-gradient-to-r from-zinc-100 to-zinc-300 bg-clip-text text-transparent">
+        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300">
+          <h2 className="text-2xl font-semibold mb-8 text-white">
             Stack Tecnológico
           </h2>
           <div className="space-y-6">
@@ -111,7 +109,7 @@ function About() {
                     .map((tech, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-zinc-800/50 border border-zinc-700/50 rounded-lg text-sm text-zinc-300 hover:bg-zinc-700/50 hover:border-zinc-600 hover:scale-105 hover:shadow-md hover:shadow-zinc-700/30 transition-all duration-200 cursor-default"
+                        className="px-4 py-2 bg-blue-900/30 border border-blue-800/50 rounded-lg text-sm text-cyan-100 hover:bg-blue-800/40 hover:border-blue-600 hover:scale-105 hover:shadow-md hover:shadow-blue-700/30 transition-all duration-200 cursor-default"
                       >
                         {tech.name}
                       </span>
