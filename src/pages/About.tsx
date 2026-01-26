@@ -17,13 +17,13 @@ function About() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
-      <div className="max-w-5xl mx-auto px-8 py-20">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-20">
         {/* Hero Section */}
-        <div className="mb-20">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+        <div className="mb-12 md:mb-20">
+          <h1 className="text-4xl md:text-7xl font-bold mb-4 md:mb-6 text-white">
             Ismael Fuentes Sintes
           </h1>
-          <p className="text-xl md:text-2xl text-zinc-400 font-light mb-6">
+          <p className="text-lg md:text-2xl text-zinc-400 font-light mb-4 md:mb-6">
             Desarrollador Full Stack
           </p>
 
@@ -68,8 +68,8 @@ function About() {
         </div>
 
         {/* About Section */}
-        <div className="space-y-8 mb-20">
-          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300 group">
+        <div className="space-y-6 md:space-y-8 mb-12 md:mb-20">
+          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300 group">
             <h2 className="text-2xl font-semibold mb-4 text-white">Sobre mí</h2>
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
@@ -93,7 +93,7 @@ function About() {
         </div>
 
         {/* Technologies Section */}
-        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300">
+        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300">
           <h2 className="text-2xl font-semibold mb-8 text-white">
             Stack Tecnológico
           </h2>

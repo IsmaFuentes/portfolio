@@ -63,10 +63,10 @@ function Projects() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
-      <div className="max-w-6xl mx-auto px-8 py-20">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20">
         {/* Header */}
-        <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+        <div className="mb-10 md:mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-4 text-white">
             Proyectos Destacados
           </h1>
           <p className="text-zinc-400 text-lg">
@@ -75,11 +75,11 @@ function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300 group flex flex-col"
+              className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300 group flex flex-col"
             >
               {/* Category & Status */}
               <div className="flex items-center justify-between mb-4">

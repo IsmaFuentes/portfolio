@@ -80,10 +80,10 @@ function Experience() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
-      <div className="max-w-5xl mx-auto px-8 py-20">
+      <div className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-20">
         {/* Header */}
-        <div className="mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 text-white">
+        <div className="mb-10 md:mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold mb-3 md:mb-4 text-white">
             Experiencia Profesional
           </h1>
           <p className="text-zinc-400 text-lg">
@@ -96,7 +96,7 @@ function Experience() {
           {/* Timeline line */}
           <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-blue-700 via-cyan-600 to-blue-900"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {experiences.map((exp, index) => (
               <div key={index} className="relative pl-8 md:pl-20">
                 {/* Timeline dot */}
