@@ -73,20 +73,28 @@ function About() {
             <h2 className="text-2xl font-semibold mb-4 text-white">Sobre mí</h2>
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
-                Desarrollador .NET especializado en backend y aplicaciones de
-                escritorio y multiplataforma, con experiencia adicional en
-                Node.js y React.js.
+                Desarrollador .NET con experiencia en backend y aplicaciones de
+                escritorio, web y multiplataforma. A lo largo de mi trayectoria
+                he trabajado en entornos de alta responsabilidad, participando
+                en el mantenimiento, evolución y modernización de sistemas
+                críticos, así como en la migración de aplicaciones legacy hacia
+                stacks tecnológicos más actuales. Complemento mi perfil con
+                experiencia en Node.js y React, especialmente en el desarrollo
+                de APIs y aplicaciones web.
               </p>
               <p>
-                Compagino mi vida laboral con el deporte de competición,
-                práctica que realizo desde muy joven y que me ha enseñado
-                disciplina, constancia y auto-superación, valores que intento
-                aplicar a diario en mi entorno profesional.
+                Compagino mi vida profesional con el deporte de competición, una
+                práctica que me ha acompañado desde joven y que ha reforzado
+                valores como la disciplina, la constancia y la capacidad de
+                superación, los cuales aplico de forma natural en mi día a día
+                como desarrollador, especialmente en contextos de presión o con
+                alta carga técnica.
               </p>
               <p>
-                Valoro ambientes laborales que promuevan el equilibrio y el
-                bienestar, ya que creo que son clave para el éxito a largo
-                plazo.
+                Valoro entornos de trabajo que fomenten el equilibrio, la mejora
+                continua y el bienestar del equipo, convencido de que estos
+                factores son clave para construir soluciones sólidas y
+                sostenibles a largo plazo.
               </p>
             </div>
           </div>
