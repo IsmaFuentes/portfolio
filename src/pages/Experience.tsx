@@ -1,7 +1,7 @@
 function Experience() {
   const experiences = [
     {
-      company: "DISPREU Logística SL",
+      company: "DISPREU Logística SL - BINIPREU",
       period: "Noviembre 2024 - Enero 2026",
       description: "Incorporación directa como único programador de la empresa",
       highlights: [
@@ -16,7 +16,8 @@ function Experience() {
     {
       company: "Menorca Software Applications",
       period: "Septiembre 2023 - Octubre 2024",
-      description: "Soporte informático y desarrollo para DISPREU Logística",
+      description:
+        "Soporte informático y desarrollo para DISPREU Logística y BINIPREU",
       highlights: [
         "Mantenimiento de aplicaciones de gestión de supermercados",
         "Desarrollo backend para análisis estadístico",
@@ -29,7 +30,8 @@ function Experience() {
     {
       company: "Laberït",
       period: "Febrero 2022 - Septiembre 2023",
-      description: "Adquisición de Kuara Software",
+      description:
+        "Adquisición de Kuara Software - Desarrollo de aplicaciones a medida",
       highlights: [
         "Migración completa de stack tecnológico a Node.js, MongoDB y React",
         "Migración de Tesseract a Azure Document Recognizer",
@@ -41,7 +43,7 @@ function Experience() {
     {
       company: "Kuara Software",
       period: "Marzo 2020 - Febrero 2022",
-      description: "Proyectos destacados y desarrollo",
+      description: "Desarrollo de aplicaciones a medida",
       highlights: [
         "OCR: Sistema de facturación con Tesseract, plantillas y firmas por roles",
         "Check-in Online: API REST + Frontend React con OCR integrado",
