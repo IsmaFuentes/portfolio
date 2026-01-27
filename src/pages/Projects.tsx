@@ -1,66 +1,6 @@
-function Projects() {
-  const projects = [
-    {
-      title: "Análisis de datos aplicados al Piragüismo",
-      description:
-        "Desarrollo colaborativo con la Federación Balear de Piragüismo para el análisis estadístico de datos GPS extraídos de dispositivos WIMU.",
-      features: [
-        "Carga de datos desde archivos CSV extraídos del WIMU",
-        "Visualización interactiva de datos con capacidad de recorte de zonas",
-        "Autodetección inteligente de zonas de esfuerzo",
-        "Análisis de paleo y generación de informes analíticos",
-      ],
-      tech: [".NET 10", "WPF", "MVVM", "ScottPlot"],
-      status: "En producción",
-      category: "Deportivo",
-    },
-    {
-      title: "Extracción de datos vía Web Scraping",
-      description:
-        "Sistema automatizado de extracción de datos de páginas web para análisis de competencia.",
-      features: [
-        "Más de 10 páginas de comercios online soportadas",
-        "Extracción de datos programada y automatizada",
-        "Volcado de datos en formato Excel o CSV",
-        "Interfaz WPF o WinForms para configuración y gestión",
-      ],
-      status: "Completado",
-      tech: [".NET 8", "WPF / WinForms", "MVVM", "Puppeteer", "DevExpress"],
-      category: "Automatización",
-    },
-    {
-      title: "Sistema OCR de Facturación",
-      description:
-        "Sistema de reconocimiento óptico de caracteres para automatizar la extracción de datos de facturas con sistema de validación por roles.",
-      features: [
-        "Versión inicial en WinForms con DevExpress XAF",
-        "Motor Tesseract OCR con plantillas personalizadas",
-        "Sistema de coordenadas para extracción estructurada",
-        "Workflow de firmas basado en roles",
-        "Migración posterior a Azure Document Recognizer (AI Cloud)",
-        "Homologado con Hacienda",
-      ],
-      tech: [".NET", "DevExpress XAF", "Tesseract", "Azure AI", "Node.js"],
-      status: "Completado",
-      category: "Automatización",
-    },
-    {
-      title: "PMS Hotelero & Check-in Online",
-      description:
-        "Mantenimiento y desarrollo de nuevas features para sistema de gestión hotelera y desarrollo de webapp de check-in online.",
-      features: [
-        "Mantenimiento y nuevas features para PMS",
-        "Generación de informes personalizados",
-        "Panel centralizado inspirado en Navision",
-        "Check-in Online OCR: Webapp separada integrada con PMS",
-        "Mantenimiento del TPV",
-      ],
-      tech: [".NET", "DevExpress XAF", "MSSQL", "React"],
-      status: "Completado",
-      category: "Gestión",
-    },
-  ];
+import { projects } from "./data/index.ts";
 
+function Projects() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20">
