@@ -71,7 +71,7 @@ function About() {
         </div>
 
         {/* About Section */}
-        <div className="space-y-6 md:space-y-8 mb-12 md:mb-20">
+        <div className="space-y-6 md:space-y-8 mb-12 md:mb-10">
           <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300 group">
             <h2 className="text-2xl font-semibold mb-4 text-white">Sobre mí</h2>
             <div className="space-y-4 text-zinc-300 leading-relaxed">
@@ -101,6 +101,50 @@ function About() {
                 factores son clave para construir soluciones sólidas y
                 sostenibles a largo plazo.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Education Section */}
+        <div className="mb-10 md:mb-10">
+          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300">
+            <h2 className="text-2xl font-semibold mb-6 text-white">Estudios</h2>
+            <div className="space-y-4">
+              <div className="border-l-2 border-blue-700 pl-4">
+                <h3 className="text-lg font-semibold text-white">
+                  Desarrollo de aplicaciones multiplataforma
+                </h3>
+                <p className="text-sm text-zinc-400">
+                  CFGS DAM - Septiembre 2022 a Junio 2023
+                </p>
+              </div>
+
+              <div className="border-l-2 border-blue-700 pl-4">
+                <h3 className="text-lg font-semibold text-white">
+                  Desarrollo de aplicaciones web
+                </h3>
+                <p className="text-sm text-zinc-400">
+                  CFGS DAW - Septiembre 2017 a Junio 2019
+                </p>
+              </div>
+
+              <div className="border-l-2 border-blue-700 pl-4">
+                <h3 className="text-lg font-semibold text-white">
+                  Sistemas microinformáticos y redes
+                </h3>
+                <p className="text-sm text-zinc-400">
+                  CFGM SMX - Septiembre 2015 a Junio 2017
+                </p>
+              </div>
+
+              <div className="border-l-2 border-blue-700 pl-4">
+                <h3 className="text-lg font-semibold text-white">
+                  Trinity College London Grade 8 (B2.2)
+                </h3>
+                <p className="text-sm text-zinc-400">
+                  Estudios de inglés - Septiembre 2011 a Junio 2012
+                </p>
+              </div>
             </div>
           </div>
         </div>
