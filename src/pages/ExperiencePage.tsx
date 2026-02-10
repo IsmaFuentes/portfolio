@@ -10,7 +10,7 @@ function ExperiencePage() {
             Experiencia Profesional
           </h1>
           <p className="text-zinc-400 text-lg">
-            +7 años de trayectoria en desarrollo de software
+            7+ años de trayectoria en desarrollo de software
           </p>
         </div>
 

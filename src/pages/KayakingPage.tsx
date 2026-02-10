@@ -58,6 +58,7 @@ function KayakingPage() {
     "Cálculo de métricas avanzadas de paleo",
     "Integración directa con la web de la federación para la subida de ficheros procesados",
     "Generación de informes detallados por sesión",
+    "Alto rendimiento con archivos CSV de gran tamaño (100mb+)",
   ];
 
   const techStack = [
@@ -118,11 +119,12 @@ function KayakingPage() {
           </h2>
           <div className="space-y-4 text-zinc-300 leading-relaxed">
             <p>
-              La Federación Balear de Piragüismo disponía de una aplicación de
-              escritorio para el análisis de datos GPS desarrollada inicialmente
-              en MATLAB. Aunque funcional, esta primera versión presentaba
-              importantes problemas de rendimiento, usabilidad y mantenibilidad,
-              lo que dificultaba su evolución y uso diario.
+              La Federación Balear, entidad <strong>pionera en España</strong>{" "}
+              en el ámbito de análisis deportivo de datos GPS aplicados al
+              piragüismo, disponía de una aplicación de escritorio desarrollada
+              inicialmente en MATLAB. Aunque funcional, esta primera versión
+              presentaba importantes problemas de rendimiento, usabilidad y
+              mantenibilidad, lo que dificultaba su evolución y uso diario.
             </p>
             <p>
               Mi rol en el proyecto fue el de ofrecer una solución escalable y
@@ -187,10 +189,15 @@ function KayakingPage() {
               controles claros para la selección de archivos, recorte y
               visualización de datos.
             </p>
-            <p className="text-zinc-300 leading-relaxed">
+            <p className="text-zinc-300 leading-relaxed mb-3">
               Incluye modos oscuro y claro para adaptarse a las preferencias del
               usuario y facilitar el trabajo en diferentes condiciones de
               iluminación.
+            </p>
+            <p className="text-zinc-300 leading-relaxed">
+              El funcionamiento de la aplicación es completamente{" "}
+              <strong>offline</strong>, a excepción del formulario de
+              integración con la web.
             </p>
           </div>
         </div>
@@ -239,6 +246,19 @@ function KayakingPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Acknowledgments */}
+        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
+          <h2 className="text-2xl font-semibold text-white mb-4">
+            Agradecimientos
+          </h2>
+          <p className="text-zinc-300 leading-relaxed">
+            Quiero agradecer formalmente a Carlos Badiola, desarrollador
+            original de la aplicación en MATLAB, por sus esfuerzos iniciales y
+            su colaboración con la Federación Balear de Piragüismo. Su trabajo
+            sentó las bases que permitieron la evolución de este proyecto.
+          </p>
         </div>
 
         {/* Results */}
