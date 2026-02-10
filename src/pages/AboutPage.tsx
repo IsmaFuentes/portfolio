@@ -3,7 +3,7 @@ import GitHubLink from "../components/GithubLink";
 import { technologies } from "./data";
 import profileImage from "../assets/profile.jpg";
 
-function About() {
+function AboutPage() {
   const categories = Array.from(new Set(technologies.map((t) => t.category)));
 
   return (
@@ -150,4 +150,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutPage;

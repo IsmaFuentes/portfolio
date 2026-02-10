@@ -1,6 +1,6 @@
 import { experiences } from "./data/index.ts";
 
-function Experience() {
+function ExperiencePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
       <div className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-20">
@@ -65,4 +65,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default ExperiencePage;

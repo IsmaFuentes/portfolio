@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import About from "./pages/About";
-import Experience from "./pages/Experience";
-import Projects from "./pages/Projects";
+import AboutPage from "./pages/AboutPage";
+import ExperiencePage from "./pages/ExperiencePage";
+import ProjectsPage from "./pages/ProjectsPage";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
+import KayakingPage from "./pages/Kayaking";
 
 function App() {
   return (
@@ -11,9 +12,10 @@ function App() {
       <NavigationBar />
       <main className="flex-grow">
         <Routes>
-          <Route path="/" element={<About />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<AboutPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/kayaking" element={<KayakingPage />} />
         </Routes>
       </main>
       <Footer />
