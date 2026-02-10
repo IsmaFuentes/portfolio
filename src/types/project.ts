@@ -5,4 +5,5 @@ export type Project = {
   tech: string[];
   status: string;
   category: string;
+  viewLink?: string; // Enlace opcional para ver detalles del proyecto
 };

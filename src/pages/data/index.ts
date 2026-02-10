@@ -118,6 +118,7 @@ export const projects: Project[] = [
     tech: [".NET 10", "WPF", "MVVM", "ScottPlot"],
     status: "En desarrollo",
     category: "Deportivo",
+    viewLink: "/projects/kayaking",
   },
   {
     title: "Extracción de datos y automatización web",

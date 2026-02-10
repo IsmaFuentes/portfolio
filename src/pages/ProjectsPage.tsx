@@ -1,4 +1,5 @@
 import { projects } from "./data/index.ts";
+import { Link } from "react-router-dom";
 
 function ProjectsPage() {
   return (
@@ -80,6 +81,33 @@ function ProjectsPage() {
                   ))}
                 </div>
               </div>
+
+              {/* View Details Link - Only for Kayaking project */}
+              {project.viewLink && (
+                <div className="mt-4 pt-4 border-t border-blue-900/50">
+                  <Link
+                    to={project.viewLink}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
+                  >
+                    <span className="font-medium">
+                      Ver detalles del proyecto
+                    </span>
+                    <svg
+                      className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              )}
             </div>
           ))}
         </div>

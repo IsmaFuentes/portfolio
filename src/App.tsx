@@ -4,7 +4,7 @@ import ExperiencePage from "./pages/ExperiencePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
-import KayakingPage from "./pages/Kayaking";
+import KayakingPage from "./pages/KayakingPage";
 
 function App() {
   return (
