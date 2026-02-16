@@ -13,11 +13,11 @@ function KayakingPage() {
       image: editor,
       title: "Editor principal",
       description:
-        "Interfaz principal para la visualización de datos en bruto y controles de recorte. Permite la visualización interactiva de datos GPS con capacidad de zoom y navegación.",
+        "Interfaz principal para la visualización de datos y controles de recorte. Permite la visualización interactiva de datos GPS con capacidad de zoom, navegación y recorte en una o varias zonas.",
     },
     {
       image: bw,
-      title: "Interfaz moderna con modo oscuro",
+      title: "Interfaz moderna con modos claro y oscuro",
       description:
         "Diseño adaptable que incluye los modos claro y oscuro, optimizado para largas sesiones de análisis sin fatiga visual.",
     },
@@ -25,7 +25,7 @@ function KayakingPage() {
       image: zonas,
       title: "Detección de zonas de esfuerzo",
       description:
-        "Algoritmo inteligente que identifica automáticamente las zonas de mayor esfuerzo durante la sesión de entrenamiento, facilitando el recorte de la zona de interés.",
+        "Algoritmo inteligente que identifica automáticamente las zonas de mayor esfuerzo durante la sesión de entrenamiento, facilitando el recorte de las zonas de interés.",
     },
     {
       image: recorte,
@@ -37,7 +37,7 @@ function KayakingPage() {
       image: api,
       title: "Integración con la web de la federación",
       description:
-        "Integración directa con el sistema web de la Federación Balear de Piragüismo para la subida automática de ficheros CSV procesados.",
+        "Integración directa con el sistema web de la Federación para la subida de ficheros CSV procesados.",
     },
     {
       image: analitica,
@@ -49,15 +49,16 @@ function KayakingPage() {
       image: informe,
       title: "Generación de informes",
       description:
-        "Sistema de informes detallados generados en HTML - WebView2, permitiendo exportar y compartir análisis completos de cada sesión.",
+        "Sistema de informes detallados generados con tecnología web gracias al componente WebView2 de Microsoft, permitiendo usar HTML y CSS para crear informes visualmente atractivos.",
     },
   ];
 
   const keyFeatures = [
     "Detección inteligente y recorte preciso de zonas de esfuerzo",
+    "Recorte en varios LAPs para sesiones con múltiples zonas de interés",
     "Cálculo de métricas avanzadas de paleo",
-    "Integración directa con la web de la federación para la subida de ficheros procesados",
-    "Generación de informes detallados por sesión",
+    "Integración directa con la web de la federación",
+    "Generación de informes detallados de la sesión y parciales",
     "Alto rendimiento con archivos CSV de gran tamaño (100mb+)",
   ];
 
@@ -122,17 +123,18 @@ function KayakingPage() {
               La Federación Balear, entidad <strong>pionera en España</strong>{" "}
               en el ámbito de análisis deportivo de datos GPS aplicados al
               piragüismo, disponía de una aplicación de escritorio desarrollada
-              inicialmente en MATLAB. Aunque funcional, esta primera versión
-              presentaba importantes problemas de rendimiento, usabilidad y
-              mantenibilidad, lo que dificultaba su evolución y uso diario.
+              inicialmente en MATLAB. Aunque funcional, esta versión presentaba
+              problemas de rendimiento, usabilidad y mantenibilidad, lo que
+              dificultaba su uso y evolución.
             </p>
             <p>
-              Mi rol en el proyecto fue el de ofrecer una solución escalable y
-              de alto rendimiento que manteniese la compatibilidad completa con
-              los flujos de trabajo existentes, mejorando significativamente la
-              experiencia del usuario y facilitando el mantenimiento a largo
-              plazo. Esto implicó un rediseño completo de la arquitectura de la
-              aplicación.
+              Mi rol fue el de ofrecer una reimplementación completa de las
+              funcionalidades clave de la aplicación, ofreciendo un sistema
+              escalable y de alto rendimiento que manteniese la compatibilidad
+              completa con los flujos de trabajo existentes, mejorando
+              significativamente la experiencia de usuario y facilitando el
+              mantenimiento a largo plazo. Esto implicó un rediseño completo de
+              la arquitectura de la aplicación.
             </p>
           </div>
         </div>
@@ -168,15 +170,19 @@ function KayakingPage() {
             <h3 className="text-xl font-semibold text-white mb-4">
               Optimización de rendimiento
             </h3>
-            <p className="text-zinc-300 leading-relaxed">
+            <p className="text-zinc-300 leading-relaxed mb-3">
               Para garantizar una visualización fluida con archivos CSV de gran
-              tamaño (100mb+ ~ 500k+ puntos), se implementó una estrategia de
-              reducción de datos orientada a la visualización. En lugar de
-              representar todos los puntos muestreados cada 10 ms, se generó una
-              estructura intermedia con un muestreo de 100 ms, manteniendo la
-              referencia al índice real de los datos brutos. Esto redujo
-              significativamente la carga de renderizado sin perder precisión en
-              el análisis.
+              tamaño, en este caso archivos de más de 100mb y 500.000 puntos, se
+              implementó una estrategia de reducción de datos orientada a la
+              visualización.
+            </p>
+
+            <p className="text-zinc-300 leading-relaxed">
+              En lugar de representar todos los puntos muestreados cada 10 ms,
+              se generó una estructura intermedia con un muestreo de 100 ms,
+              manteniendo la referencia al índice real de los datos brutos. Esto
+              redujo significativamente la carga de renderizado sin perder
+              precisión en el análisis.
             </p>
           </div>
 
@@ -190,14 +196,13 @@ function KayakingPage() {
               visualización de datos.
             </p>
             <p className="text-zinc-300 leading-relaxed mb-3">
-              Incluye modos oscuro y claro para adaptarse a las preferencias del
-              usuario y facilitar el trabajo en diferentes condiciones de
+              Incluye los temas oscuro y claro para adaptarse a las preferencias
+              del usuario y facilitar el trabajo en diferentes condiciones de
               iluminación.
             </p>
             <p className="text-zinc-300 leading-relaxed">
               El funcionamiento de la aplicación es completamente{" "}
-              <strong>offline</strong>, a excepción del formulario de
-              integración con la web.
+              <strong>offline</strong>.
             </p>
           </div>
         </div>
@@ -254,10 +259,10 @@ function KayakingPage() {
             Agradecimientos
           </h2>
           <p className="text-zinc-300 leading-relaxed">
-            Quiero agradecer formalmente a Carlos Badiola, desarrollador
-            original de la aplicación en MATLAB, por sus esfuerzos iniciales y
-            su colaboración con la Federación Balear de Piragüismo. Su trabajo
-            sentó las bases que permitieron la evolución de este proyecto.
+            Este proyecto no habría sido posible sin la colaboración y el apoyo
+            de Carlos Badiola, desarrollador original de la aplicación en
+            MATLAB. Su trabajo sentó las bases que permitieron la evolución de
+            este proyecto.
           </p>
         </div>
 
