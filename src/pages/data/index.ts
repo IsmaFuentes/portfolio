@@ -26,13 +26,13 @@ export const experiences: Experience[] = [
   {
     company: "DISPREU Logística SL - BINIPREU",
     period: "Noviembre 2024 - Febrero 2026",
-    description: "Incorporación directa como único programador de la empresa",
+    description: "Incorporación directa como responsable de programación",
     highlights: [
-      "Mantenimiento integral de toda la infraestructura de negocio",
+      "Mantenimiento integral de la infraestructura tecnológica de la empresa",
       "Desarrollo de nuevas características para programas de gestión, contabilidad, almacenes, y supermercados",
-      "Sincronización de datos y modernización de aplicaciones",
+      "Modernización y mejora de servicios de sincronización de datos",
       "Web scraping para análisis de datos",
-      "Soporte técnico y soporte para la web de facturación de clientes",
+      "Soporte técnico para DISPREU y la web de facturación de clientes",
     ],
     tech: ".NET8, .NET Framework 4.7.2, ASP.NET Core, MSSQL, DevExpress WinForms, WPF, PuppeteerSharp",
   },
@@ -45,10 +45,10 @@ export const experiences: Experience[] = [
       "Mantenimiento de aplicaciones de gestión de supermercados",
       "Desarrollo backend para análisis estadístico",
       "Servicios de Windows para sincronización de datos en tiempo real",
-      "Implementación del conector CashDro 4+ para pagos en efectivo",
-      "Soporte técnico y soporte para la web de facturación de clientes",
+      "Implementación del conector CashDro 4+ para pagos en efectivo en supermercados",
+      "Soporte técnico para DISPREU y la web de facturación de clientes",
     ],
-    tech: ".NET8, .NET Framework 4.7.2, ASP.NET Core, DevExpress WinForms, WPF, MSSQL",
+    tech: ".NET8, .NET Framework 4.7.2, ASP.NET Core, DevExpress WinForms, MSSQL",
   },
   {
     company: "Laberït",
@@ -56,10 +56,10 @@ export const experiences: Experience[] = [
     description:
       "Adquisición de Kuara Software - Desarrollo de aplicaciones a medida",
     highlights: [
-      "Migración completa de stack tecnológico a Node.js, MongoDB y React",
-      "Migración de Tesseract a Azure Document Recognizer",
-      "Desarrollo de servicios de Windows e instaladores",
       "Deasarrollo backend para sistemas de gestión internos y aplicaciones a medida",
+      "Desarrollo de servicios de Windows e instaladores",
+      "Migración completa de stack tecnológico a Node.js, MongoDB y React",
+      "Implementación de un nuevo sistema OCR basado en Azure Document Recognizer",
     ],
     tech: ".NET Framework 4.x, .NET Core, Node.js, MongoDB, MSSQL, JWT",
   },
@@ -68,11 +68,11 @@ export const experiences: Experience[] = [
     period: "Marzo 2020 - Febrero 2022",
     description: "Desarrollos própios y de aplicaciones a medida",
     highlights: [
-      "Desarrollo de una aplicación de facturación OCR basada en plantillas y firmas por roles, homologada con hacienda",
-      "Implantación de un sistema de check-in online para hoteles con OCR y firma digital",
-      "Desarrollo de un sistema de envío de facturas al SII de la AEAT",
-      "Mantenimiento del software PMS y su TPV",
+      "Desarrollo de una aplicación de facturación OCR homologada con hacienda",
       "Desarrollo backend para aplicaciones a medida",
+      "Implantación de un sistema de check-in online para hoteles con escáner OCR y firma digital",
+      "Implantación de un sistema de envío de facturas al SII de la AEAT",
+      "Mantenimiento del software PMS y su TPV",
     ],
     tech: ".NET Framework 4.x, DevExpress XAF, .NET Core, MSSQL, TesseractOCR, React",
   },
@@ -83,7 +83,6 @@ export const experiences: Experience[] = [
     highlights: [
       "Mantenimiento y desarrollo de nuevas características para el sistema PMS",
       "Generación de informes personalizados",
-      "Desarrollo de panel centralizado inspirado en Navision para el PMS",
       "Mantenimiento del software TPV",
       "Servicios de Windows para procesos internos",
     ],
@@ -121,13 +120,13 @@ export const projects: Project[] = [
     viewLink: "/projects/kayaking",
   },
   {
-    title: "Extracción de datos y automatización web",
+    title: "DISPREU - Extracción de datos y automatización web",
     description:
       "Sistema automatizado de extracción de datos de páginas web para análisis comercial.",
     features: [
-      "Más de 10 páginas de comercios online soportadas",
-      "Extracción de datos programada y automatizada",
-      "Volcado de datos en formato Excel o CSV",
+      "10+ páginas de comercios online soportadas",
+      "Extracción de datos automatizada",
+      "Volcado de datos en formato excel",
       "Interfaz WPF o WinForms para configuración y gestión de perfiles",
       "Proxies y rotación de IPs",
     ],
@@ -143,7 +142,7 @@ export const projects: Project[] = [
     category: "Automatización",
   },
   {
-    title: "Sistema OCR de Facturación",
+    title: "Kuara Software / Laberït - Sistema OCR de Facturación",
     description:
       "Sistema de reconocimiento óptico de caracteres para automatizar la extracción de datos de facturas con sistema de validación por roles.",
     features: [
@@ -160,7 +159,7 @@ export const projects: Project[] = [
     category: "Automatización",
   },
   {
-    title: "PMS Hotelero & Check-in Online",
+    title: "INTEC - PMS Hotelero & Check-in Online",
     description:
       "Mantenimiento y desarrollo de nuevas características para un sistema de gestión hotelera própio e integración de una webapp de check-in online.",
     features: [

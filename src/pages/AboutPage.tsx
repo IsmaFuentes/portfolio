@@ -49,12 +49,16 @@ function AboutPage() {
                 escritorio, web y multiplataforma.
               </p>
               <p>
-                He trabajado en entornos de alta responsabilidad, abordando
-                sistemas críticos con alta deuda técnica, participando
-                activamente en su evolución y en la migración exitosa hacia
-                soluciones modernas, escalables y mantenibles. Además, cuento
-                con experiencia en Node.js y React para el desarrollo de APIs y
-                aplicaciones web.
+                A lo largo de mi carrera he trabajdo en entornos de alta
+                responsabilidad, participando en el desarrollo de sistemas
+                complejos y el mantenimiento de bases de código con alta deuda
+                técnica, participando activamente en su evolución y en la
+                migración hacía soluciones modernas, escalables y mantenibles.
+              </p>
+              <p>
+                He trabajado principalmente en entornos .NET, aunque también
+                tengo experiencia adicional con Node.js y React para el
+                desarrollo de APIs y aplicaciones web.
               </p>
               <p>
                 Compagino mi vida profesional con el deporte de competición, una

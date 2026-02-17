@@ -55,10 +55,10 @@ function KayakingPage() {
 
   const keyFeatures = [
     "Detección inteligente y recorte preciso de zonas de esfuerzo",
-    "Recorte en varios LAPs para sesiones con múltiples zonas de interés",
+    "Multi-recorte para sesiones con múltiples zonas de interés",
     "Cálculo de métricas avanzadas de paleo",
     "Integración directa con la web de la federación",
-    "Generación de informes detallados de la sesión y parciales",
+    "Generación de informes detallados",
     "Alto rendimiento con archivos CSV de gran tamaño (100mb+)",
   ];
 
@@ -123,16 +123,16 @@ function KayakingPage() {
               La Federación Balear, entidad <strong>pionera en España</strong>{" "}
               en el ámbito de análisis deportivo de datos GPS aplicados al
               piragüismo, disponía de una aplicación de escritorio desarrollada
-              inicialmente en MATLAB. Aunque funcional, esta versión presentaba
-              problemas de rendimiento, usabilidad y mantenibilidad, lo que
-              dificultaba su uso y evolución.
+              en MATLAB. Aunque funcional, esta versión presentaba problemas de
+              rendimiento con ficheros de gran tamaño, era difícil de usar y su
+              mantenibilidad era limitada, lo que dificultaba su uso y
+              evolución.
             </p>
             <p>
-              Mi rol fue el de ofrecer una reimplementación completa de las
-              funcionalidades clave de la aplicación, ofreciendo un sistema
-              escalable y de alto rendimiento que manteniese la compatibilidad
-              completa con los flujos de trabajo existentes, mejorando
-              significativamente la experiencia de usuario y facilitando el
+              Mi rol fue el de ofrecer una reimplementación completa de la
+              aplicación, ofreciendo un sistema escalable y de alto rendimiento
+              que manteniese la compatibilidad con los flujos de trabajo
+              existentes, mejorando la experiencia de usuario y facilitando el
               mantenimiento a largo plazo. Esto implicó un rediseño completo de
               la arquitectura de la aplicación.
             </p>
@@ -142,7 +142,7 @@ function KayakingPage() {
         {/* Key Features */}
         <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold text-white mb-6">
-            Funcionalidades clave
+            Funcionalidades
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {keyFeatures.map((feature, i) => (
@@ -174,7 +174,7 @@ function KayakingPage() {
               Para garantizar una visualización fluida con archivos CSV de gran
               tamaño, en este caso archivos de más de 100mb y 500.000 puntos, se
               implementó una estrategia de reducción de datos orientada a la
-              visualización.
+              visualización (downsampling).
             </p>
 
             <p className="text-zinc-300 leading-relaxed">
@@ -196,13 +196,13 @@ function KayakingPage() {
               visualización de datos.
             </p>
             <p className="text-zinc-300 leading-relaxed mb-3">
-              Incluye los temas oscuro y claro para adaptarse a las preferencias
+              Soporta los modos claro y oscuro para adaptarse a las preferencias
               del usuario y facilitar el trabajo en diferentes condiciones de
               iluminación.
             </p>
             <p className="text-zinc-300 leading-relaxed">
-              El funcionamiento de la aplicación es completamente{" "}
-              <strong>offline</strong>.
+              El funcionamiento de la aplicación es completamente offline, lo
+              que facilita su uso en entornos con conectividad limitada.
             </p>
           </div>
         </div>
