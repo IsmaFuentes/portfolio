@@ -1,73 +1,113 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio profesional desarrollado con React, TypeScript y Tailwind CSS, diseñado para mostrar experiencia, proyectos y habilidades técnicas.
 
-Currently, two official plugins are available:
+## 🚀 Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Ver portfolio en vivo](https://IsmaFuentes.github.io/portfolio)
 
-## React Compiler
+## 📋 Descripción
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este portfolio presenta mi trayectoria profesional como desarrollador de software, destacando:
 
-## Expanding the ESLint configuration
+- Experiencia laboral (backend, desktop, web)
+- Proyectos destacados con casos de estudio detallados
+- Stack tecnológico y habilidades técnicas
+- Enlaces a perfiles profesionales (LinkedIn, GitHub)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🎨 Secciones
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 1. **Sobre mí** (`/`)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Página principal que incluye:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Información personal y presentación profesional
+- Lista de tecnologías organizadas por categorías (Backend, Frontend, Desktop, Database, Mobile)
+- Enlaces a redes sociales profesionales
+
+### 2. **Experiencia** (`/experience`)
+
+Historial laboral cronológico detallando:
+
+- Empresas y períodos trabajados
+- Descripción de responsabilidades
+- Tecnologías utilizadas en cada rol
+- Logros y proyectos destacados
+
+### 3. **Proyectos** (`/projects`)
+
+Galería de proyectos destacados con:
+
+- Descripción general de cada proyecto
+- Características principales
+- Stack tecnológico empleado
+- Estado del proyecto (En desarrollo, Completado)
+- Enlaces a páginas de detalle cuando aplique
+
+### 4. **Proyecto Destacado: Kayaking** (`/projects/kayaking`)
+
+Caso de estudio completo del proyecto de análisis de datos para piragüismo que incluye:
+
+- Contexto y problema a resolver
+- Solución implementada y arquitectura
+- Funcionalidades clave destacadas
+- Mejoras recientes (visualización velocidad/aceleración, multi-recorte, informes personalizables)
+- Galería completa con 10 capturas de pantalla descriptivas
+- Detalles técnicos y optimizaciones de rendimiento
+- Agradecimientos y colaboradores
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Framework**: React 19 con TypeScript
+- **Build Tool**: Vite 7
+- **Estilos**: Tailwind CSS 4
+- **Routing**: React Router DOM 7
+- **Iconos**: React Icons
+- **Deployment**: GitHub Pages
+- **Linting**: ESLint con configuración TypeScript
+
+## 📁 Estructura del Proyecto
+
+```
+portfolio/
+├── src/
+│   ├── assets/           # Imágenes y recursos estáticos
+│   │   ├── apex/         # Capturas del proyecto Kayaking
+│   │   └── profile.jpg   # Foto de perfil
+│   ├── components/       # Componentes reutilizables
+│   │   ├── Footer.tsx
+│   │   ├── NavigationBar.tsx
+│   │   ├── GithubLink.tsx
+│   │   └── LinkedinLink.tsx
+│   ├── pages/            # Páginas principales
+│   │   ├── AboutPage.tsx
+│   │   ├── ExperiencePage.tsx
+│   │   ├── ProjectsPage.tsx
+│   │   ├── KayakingPage.tsx
+│   │   └── data/
+│   │       └── index.ts  # Datos centralizados (proyectos, experiencia, tecnologías)
+│   ├── types/            # Definiciones TypeScript
+│   │   ├── experience.ts
+│   │   ├── project.ts
+│   │   └── technology.ts
+│   ├── App.tsx           # Componente principal con routing
+│   ├── main.tsx          # Entry point
+│   └── index.css         # Estilos globales y Tailwind
+├── public/               # Assets públicos
+├── package.json
+├── vite.config.ts        # Configuración de Vite
+├── tsconfig.json         # Configuración TypeScript
+└── eslint.config.js      # Configuración ESLint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Diseño y Estilos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+El portfolio utiliza **Tailwind CSS 4** con un esquema de colores moderno basado en tonos azules y cyan sobre fondos oscuros:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Paleta de colores
+
+- **Fondo principal**: Gradiente `from-blue-950 via-black to-cyan-950`
+- **Acentos principales**: `cyan-400`, `cyan-300`
+- **Elementos secundarios**: `blue-900`, `blue-800`
+- **Texto**: `white`, `zinc-300`, `zinc-400`
+- **Bordes**: `blue-900/50` con opacidad variable
