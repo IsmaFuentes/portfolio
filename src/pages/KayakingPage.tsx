@@ -1,64 +1,85 @@
 import { Link } from "react-router-dom";
-import editor from "../assets/apex/1-editor.png";
-import bw from "../assets/apex/2-b&w.png";
+import editorAceleracion from "../assets/apex/1-editor-aceleracion.png";
+import editorVelocidad from "../assets/apex/1-editor-velocidad.png";
 import zonas from "../assets/apex/3-zonas.png";
 import recorte from "../assets/apex/4-recorte.png";
 import api from "../assets/apex/5-api.png";
 import analitica from "../assets/apex/6-analitica.png";
-import informe from "../assets/apex/7-informe.png";
+import informesDropdown from "../assets/apex/7-informes-dropdown.png";
+import informesGeneral from "../assets/apex/8-informes-general.png";
+import informesParciales from "../assets/apex/9-informes-parciales.png";
+import bw from "../assets/apex/10-b&w.png";
 
 function KayakingPage() {
   const screenshots = [
     {
-      image: editor,
-      title: "Editor principal",
+      image: editorVelocidad,
+      title: "Editor principal - Visualización de velocidad",
       description:
-        "Interfaz principal para la visualización de datos y controles de recorte. Permite la visualización interactiva de datos GPS con capacidad de zoom, navegación y recorte en una o varias zonas.",
+        "Interfaz principal mostrando la visualización de velocidad. Incluye controles de zoom, navegación y capacidad de multi-recorte para analizar múltiples zonas de interés en una misma sesión.",
     },
     {
-      image: bw,
-      title: "Interfaz moderna con modos claro y oscuro",
+      image: editorAceleracion,
+      title: "Editor principal - Visualización de aceleración",
       description:
-        "Diseño adaptable que incluye los modos claro y oscuro, optimizado para largas sesiones de análisis sin fatiga visual.",
+        "Vista alternativa del editor mostrando datos de aceleración. La aplicación permite alternar entre velocidad y aceleración en tiempo real para facilitar la detección de zonas de esfuerzo.",
     },
     {
       image: zonas,
       title: "Detección de zonas de esfuerzo",
       description:
-        "Algoritmo inteligente que identifica automáticamente las zonas de mayor esfuerzo durante la sesión de entrenamiento, facilitando el recorte de las zonas de interés.",
+        "Algoritmo inteligente que identifica automáticamente las zonas de mayor esfuerzo durante la sesión de entrenamiento, facilitando el recorte de las zonas de interés. El programa permite añadir marcadores de forma manual y ajustarlos libremente hasta alcanzar la distancia deseada.",
     },
     {
       image: recorte,
-      title: "Herramienta de recorte de datos",
+      title: "Sistema de multi-recorte",
       description:
-        "Permite ajustar con precisión el inicio y fin de la sesión para eliminar datos irrelevantes y mejorar la calidad del análisis.",
+        "Herramienta que permite crear múltiples zonas de recorte en una misma sesión. Los usuarios pueden ajustar con precisión el inicio y fin de cada parcial para analizar múltiples segmentos independientes.",
     },
     {
       image: api,
       title: "Integración con la web de la federación",
       description:
-        "Integración directa con el sistema web de la Federación para la subida de ficheros CSV procesados.",
+        "Integración directa con el sistema web de la Federación Balear de Piragüismo para la subida de ficheros CSV procesados.",
     },
     {
       image: analitica,
       title: "Panel de análisis general",
       description:
-        "Vista consolidada de estadísticas y detalles de la sesión, incluyendo velocidad, ritmo, distancia, desviación, y desglose en parciales",
+        "Vista consolidada de estadísticas y detalles de la sesión, incluyendo velocidad, ritmo, distancia, desviación y desglose completo en parciales. La vista permite desglosar la sesión en hasta 10 parciales.",
     },
     {
-      image: informe,
-      title: "Generación de informes",
+      image: informesDropdown,
+      title: "Menú de selección de informes",
       description:
-        "Sistema de informes detallados generados con tecnología web gracias al componente WebView2 de Microsoft, permitiendo usar HTML y CSS para crear informes visualmente atractivos.",
+        "Dropdown que permite al usuario elegir entre generar un informe general de toda la sesión o por parciales.",
+    },
+    {
+      image: informesGeneral,
+      title: "Informe general de la sesión",
+      description:
+        "Informe completo que muestra las estadísticas globales de toda la sesión, incluyendo métricas principales como tiempo, velocidad y paleo y desviación de la embarcación durante el recorrido.",
+    },
+    {
+      image: informesParciales,
+      title: "Informe detallado por parcial",
+      description:
+        "Informe específico por parciales. Analiza cada segmento de la sesión de forma individual.",
+    },
+    {
+      image: bw,
+      title: "Interfaz con modo claro",
+      description:
+        "Diseño adaptable que incluye tanto modo claro como oscuro, optimizado para largas sesiones de análisis sin fatiga visual en cualquier condición de iluminación.",
     },
   ];
 
   const keyFeatures = [
-    "Detección inteligente y recorte preciso de zonas de esfuerzo",
-    "Multi-recorte para sesiones con múltiples zonas de interés",
+    "Visualización alternativa entre velocidad y aceleración",
+    "Multi-recorte para análisis de múltiples parciales en una sesión",
+    "Detección inteligente de zonas de esfuerzo",
     "Cálculo de métricas avanzadas de paleo",
-    "Integración directa con la web de la federación",
-    "Generación de informes detallados",
+    "Informes personalizables: general o por parciales",
     "Alto rendimiento con archivos CSV de gran tamaño (100mb+)",
   ];
 
@@ -139,10 +160,73 @@ function KayakingPage() {
           </div>
         </div>
 
+        {/* Latest Features Highlight */}
+        <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 backdrop-blur-sm border border-cyan-800/50 rounded-2xl p-6 md:p-8 mb-12">
+          <h2 className="text-2xl font-semibold mb-6">Mejoras recientes</h2>
+          <div className="space-y-4">
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center mr-4 mt-1">
+                <svg
+                  className="w-4 h-4 text-cyan-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Visualización de velocidad y aceleración
+                </h3>
+                <p className="text-zinc-300 leading-relaxed">
+                  El editor ahora permite alternar entre visualización de
+                  velocidad y aceleración, con el fin de facilitar la detección
+                  de zonas de esfuerzo para su posterior recorte y análisis.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center mr-4 mt-1">
+                <svg
+                  className="w-4 h-4 text-cyan-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Sistema de multi-recorte
+                </h3>
+                <p className="text-zinc-300 leading-relaxed">
+                  La aplicación ahora soporta la creación de múltiples zonas de
+                  recorte en una misma sesión, permitiendo analizar varios
+                  parciales independientes sin necesidad de procesar el archivo
+                  múltiples veces.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Key Features */}
         <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold text-white mb-6">
-            Funcionalidades
+            Funcionalidades clave
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {keyFeatures.map((feature, i) => (
@@ -270,10 +354,10 @@ function KayakingPage() {
         <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-800/50 rounded-2xl p-6 md:p-8">
           <h2 className="text-2xl font-semibold text-white mb-4">Resultado</h2>
           <p className="text-zinc-200 leading-relaxed text-lg">
-            El resultado fue una aplicación más rápida, intuitiva y fácil de
-            mantener, que ha sido muy bien recibida por la federación,
-            contribuyendo a mejorar el análisis de datos GPS en el ámbito del
-            piragüismo en las Islas Baleares.
+            El resultado ha sido una aplicación más rápida, intuitiva y fácil de
+            utilizar y mantener, que ha sido muy bien recibida por la
+            federación, contribuyendo a mejorar el análisis de datos GPS en el
+            ámbito del piragüismo en las Islas Baleares.
           </p>
         </div>
       </div>
