@@ -22,19 +22,19 @@ function KayakingPage() {
       image: editorAceleracion,
       title: "Editor principal - Visualización de aceleración",
       description:
-        "Vista alternativa del editor mostrando datos de aceleración. La aplicación permite alternar entre velocidad y aceleración en tiempo real para facilitar la detección de zonas de esfuerzo.",
+        "Vista alternativa del editor mostrando datos de aceleración.",
     },
     {
       image: zonas,
       title: "Detección de zonas de esfuerzo",
       description:
-        "Algoritmo inteligente que identifica automáticamente las zonas de mayor esfuerzo durante la sesión de entrenamiento, facilitando el recorte de las zonas de interés. El programa permite añadir marcadores de forma manual y ajustarlos libremente hasta alcanzar la distancia deseada.",
+        "Algoritmo inteligente que identifica automáticamente las zonas de mayor esfuerzo durante la sesión de entrenamiento, facilitando el recorte de las zonas de interés. El programa también permite añadir marcadores de forma manual y ajustarlos libremente hasta alcanzar la distancia deseada.",
     },
     {
       image: recorte,
       title: "Sistema de multi-recorte",
       description:
-        "Herramienta que permite crear múltiples zonas de recorte en una misma sesión. Los usuarios pueden ajustar con precisión el inicio y fin de cada parcial para analizar múltiples segmentos independientes.",
+        "Función que permite crear múltiples zonas de recorte en una misma sesión. Los usuarios pueden ajustar con precisión el inicio y fin de cada parcial para analizar múltiples segmentos independientes.",
     },
     {
       image: api,
@@ -58,7 +58,7 @@ function KayakingPage() {
       image: informesGeneral,
       title: "Informe general de la sesión",
       description:
-        "Informe completo que muestra las estadísticas globales de toda la sesión, incluyendo métricas principales como tiempo, velocidad y paleo y desviación de la embarcación durante el recorrido.",
+        "Informe completo que muestra las estadísticas globales, incluyendo métricas principales como tiempo, velocidad, paleo y desviación de la embarcación durante el recorrido.",
     },
     {
       image: informesParciales,
@@ -141,21 +141,22 @@ function KayakingPage() {
           </h2>
           <div className="space-y-4 text-zinc-300 leading-relaxed">
             <p>
-              La Federación Balear, entidad <strong>pionera en España</strong>{" "}
-              en el ámbito de análisis deportivo de datos GPS aplicados al
-              piragüismo, disponía de una aplicación de escritorio desarrollada
-              en MATLAB. Aunque funcional, esta versión presentaba problemas de
-              rendimiento con ficheros de gran tamaño, era difícil de usar y su
-              mantenibilidad era limitada, lo que dificultaba su uso y
-              evolución.
+              La Federación Balear, entidad pionera en España en el ámbito de
+              análisis deportivo de datos GPS aplicados al piragüismo, disponía
+              de una aplicación de escritorio desarrollada en MATLAB. Aunque
+              funcional, esta versión presentaba problemas de rendimiento, era
+              difícil de usar y su mantenibilidad era limitada, lo que
+              dificultaba su uso y evolución.
             </p>
             <p>
-              Mi rol fue el de ofrecer una reimplementación completa de la
-              aplicación, ofreciendo un sistema escalable y de alto rendimiento
-              que manteniese la compatibilidad con los flujos de trabajo
-              existentes, mejorando la experiencia de usuario y facilitando el
-              mantenimiento a largo plazo. Esto implicó un rediseño completo de
-              la arquitectura de la aplicación.
+              Mi función en este proyecto ha sido la de reimplementar
+              completamente la aplicación original, con el objetivo de mejorar
+              su rendimiento, usabilidad y mantenibilidad, manteniendo la
+              compatibilidad con los flujos de trabajo existentes. El resultado
+              ha sido una aplicación más rápida, intuitiva y fácil de mantener,
+              que ha sido muy bien recibida por la federación y ha contribuido a
+              mejorar el análisis de datos GPS en el ámbito del piragüismo en
+              las Islas Baleares.
             </p>
           </div>
         </div>
@@ -165,58 +166,42 @@ function KayakingPage() {
           <h2 className="text-2xl font-semibold mb-6">Mejoras recientes</h2>
           <div className="space-y-4">
             <div className="flex items-start">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center mr-4 mt-1">
-                <svg
-                  className="w-4 h-4 text-cyan-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
-                  />
-                </svg>
-              </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Visualización de velocidad y aceleración
                 </h3>
                 <p className="text-zinc-300 leading-relaxed">
-                  El editor ahora permite alternar entre visualización de
-                  velocidad y aceleración, con el fin de facilitar la detección
-                  de zonas de esfuerzo para su posterior recorte y análisis.
+                  El editor permite alternar entre visualización de velocidad y
+                  aceleración, con el fin de facilitar la detección de zonas de
+                  esfuerzo para su posterior recorte y análisis.
                 </p>
               </div>
             </div>
 
             <div className="flex items-start">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center mr-4 mt-1">
-                <svg
-                  className="w-4 h-4 text-cyan-400"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
-                  />
-                </svg>
-              </div>
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Sistema de multi-recorte
                 </h3>
                 <p className="text-zinc-300 leading-relaxed">
-                  La aplicación ahora soporta la creación de múltiples zonas de
+                  La aplicación soporta la creación de múltiples zonas de
                   recorte en una misma sesión, permitiendo analizar varios
                   parciales independientes sin necesidad de procesar el archivo
                   múltiples veces.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Comportamiento de la embarcación
+                </h3>
+                <p className="text-zinc-300 leading-relaxed">
+                  Se han incluido los datos de cabeceo y escora de la
+                  embarcación a lo largo del recorrido, proporcionando
+                  información adicional sobre su comportamiento durante la
+                  sesión.
                 </p>
               </div>
             </div>
@@ -226,7 +211,7 @@ function KayakingPage() {
         {/* Key Features */}
         <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold text-white mb-6">
-            Funcionalidades clave
+            Funcionalidades
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             {keyFeatures.map((feature, i) => (
@@ -258,15 +243,14 @@ function KayakingPage() {
               Para garantizar una visualización fluida con archivos CSV de gran
               tamaño, en este caso archivos de más de 100mb y 500.000 puntos, se
               implementó una estrategia de reducción de datos orientada a la
-              visualización (downsampling).
+              visualización.
             </p>
 
-            <p className="text-zinc-300 leading-relaxed">
-              En lugar de representar todos los puntos muestreados cada 10 ms,
-              se generó una estructura intermedia con un muestreo de 100 ms,
-              manteniendo la referencia al índice real de los datos brutos. Esto
-              redujo significativamente la carga de renderizado sin perder
-              precisión en el análisis.
+            <p className="text-zinc-300 leading-relaxed mb-3">
+              El muestreo original del dispositivo WIMU es de 10ms, mientras que
+              para la representación gráfica se ha incrementado a 100ms, lo que
+              reduce significativamente la cantidad de puntos a procesar sin
+              perder información relevante para el análisis visual.
             </p>
           </div>
 
@@ -354,10 +338,10 @@ function KayakingPage() {
         <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-800/50 rounded-2xl p-6 md:p-8">
           <h2 className="text-2xl font-semibold text-white mb-4">Resultado</h2>
           <p className="text-zinc-200 leading-relaxed text-lg">
-            El resultado ha sido una aplicación más rápida, intuitiva y fácil de
-            utilizar y mantener, que ha sido muy bien recibida por la
-            federación, contribuyendo a mejorar el análisis de datos GPS en el
-            ámbito del piragüismo en las Islas Baleares.
+            El resultado ha sido una aplicación más rápida, mantenible e
+            intuitiva, que ha sido muy bien recibida por la federación,
+            contribuyendo a mejorar el análisis de datos GPS en el ámbito del
+            piragüismo de alto rendimiento.
           </p>
         </div>
       </div>
