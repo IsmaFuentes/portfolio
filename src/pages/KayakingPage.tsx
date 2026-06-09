@@ -8,7 +8,8 @@ import analitica from "../assets/apex/6-analitica.png";
 import informesDropdown from "../assets/apex/7-informes-dropdown.png";
 import informesGeneral from "../assets/apex/8-informes-general.png";
 import informesParciales from "../assets/apex/9-informes-parciales.png";
-import bw from "../assets/apex/10-b&w.png";
+import bw from "../assets/apex/11-b&w.png";
+import comparative from "../assets/apex/10-comparativa.png";
 
 function KayakingPage() {
   const screenshots = [
@@ -67,6 +68,12 @@ function KayakingPage() {
         "Informe específico por parciales. Analiza cada segmento de la sesión de forma individual.",
     },
     {
+      image: comparative,
+      title: "Comparativa de sesiones",
+      description:
+        "Funcionalidad que permite comparar diferentes sesiones de entrenamiento para identificar mejoras y áreas de oportunidad. Permite alternar entre velocidad, avance y paladas por minuto.",
+    },
+    {
       image: bw,
       title: "Interfaz con modo claro",
       description:
@@ -75,12 +82,14 @@ function KayakingPage() {
   ];
 
   const keyFeatures = [
-    "Visualización alternativa entre velocidad y aceleración",
-    "Multi-recorte para análisis de múltiples parciales en una sesión",
-    "Detección inteligente de zonas de esfuerzo",
+    "Recorte con visualización alternativa entre velocidad y aceleración",
+    "Recorte en parciales o LAPS para análisis detallado",
+    "Vista comparativa de sesiones para análisis de evolución",
+    "Algoritmo inteligente de detección de zonas de esfuerzo",
     "Cálculo de métricas avanzadas de paleo",
-    "Informes personalizables: general o por parciales",
-    "Alto rendimiento con archivos CSV de gran tamaño (100mb+)",
+    "Informes analíticos por sesión, parciales y comparativos",
+    "Alto rendimiento con archivos CSV de gran tamaño",
+    "Interfaz intuitiva con soporte para modo claro y oscuro",
   ];
 
   const techStack = [
@@ -142,27 +151,29 @@ function KayakingPage() {
           <div className="space-y-4 text-zinc-300 leading-relaxed">
             <p>
               La Federación Balear, entidad pionera en España en el ámbito de
-              análisis deportivo de datos GPS aplicados al piragüismo, disponía
-              de una aplicación de escritorio desarrollada en MATLAB. Aunque
-              funcional, esta versión presentaba problemas de rendimiento, era
-              difícil de usar y su mantenibilidad era limitada, lo que
-              dificultaba su uso y evolución.
+              análisis de datos GPS aplicados al piragüismo, disponía de una
+              aplicación de escritorio desarrollada en MATLAB, que aunque
+              funcional, presentaba problemas de rendimiento, era difícil de
+              usar y su mantenibilidad era limitada, lo que dificultaba su uso y
+              evolución.
             </p>
             <p>
-              Mi función en este proyecto ha sido la de reimplementar
-              completamente la aplicación original, con el objetivo de mejorar
-              su rendimiento, usabilidad y mantenibilidad, manteniendo la
-              compatibilidad con los flujos de trabajo existentes. El resultado
-              ha sido una aplicación más rápida, intuitiva y fácil de mantener,
-              que ha sido muy bien recibida por la federación y ha contribuido a
-              mejorar el análisis de datos GPS en el ámbito del piragüismo en
-              las Islas Baleares.
+              El objetivo de este proyecto ha sido el de ofrecer una solución de
+              alto rendimiento que pudiese reemplazar a la aplicación anterior,
+              manteniendo la compatibilidad con los flujos de trabajo
+              existentes.
+            </p>
+            <p>
+              El resultado ha sido una aplicación más rápida, intuitiva y fácil
+              de mantener, que ha sido muy bien recibida por la federación y que
+              ha contribuido a mejorar el trabajo que realizan en el ámbito de
+              análisis de datos.
             </p>
           </div>
         </div>
 
         {/* Latest Features Highlight */}
-        <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 backdrop-blur-sm border border-cyan-800/50 rounded-2xl p-6 md:p-8 mb-12">
+        {/* <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 backdrop-blur-sm border border-cyan-800/50 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold mb-6">Mejoras recientes</h2>
           <div className="space-y-4">
             <div className="flex items-start">
@@ -206,7 +217,7 @@ function KayakingPage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Key Features */}
         <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">

@@ -24,6 +24,16 @@ export const technologies: Technology[] = [
  */
 export const experiences: Experience[] = [
   {
+    company: "Colaboración FBP (Federación Balear de Piragüismo)",
+    period: "Noviembre 2025 - Presente",
+    description:
+      "Soporte y desarrollo de aplicaciones y análisis de datos aplicados al piragüismo",
+    highlights: [
+      "Desarrollo de una aplicación de análisis de datos GPS para piragüismo",
+    ],
+    tech: ".NET10, WPF, MVVM",
+  },
+  {
     company: "DISPREU Logística SL - BINIPREU",
     period: "Noviembre 2024 - Febrero 2026",
     description: "Incorporación directa como responsable de programación",
