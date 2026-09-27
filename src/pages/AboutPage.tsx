@@ -7,7 +7,7 @@ function AboutPage() {
   const categories = Array.from(new Set(technologies.map((t) => t.category)));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
+    <div className="min-h-screen bg-transparent">
       <div className="max-w-5xl mx-auto px-4 md:px-8 py-12 md:py-20">
         {/* Hero Section */}
         <div className="mb-12 md:mb-20">
@@ -17,7 +17,7 @@ function AboutPage() {
               <img
                 src={profileImage}
                 alt="Ismael Fuentes Sintes"
-                className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-blue-900/50 shadow-xl shadow-blue-950/50 object-cover"
+                className="w-32 h-32 md:w-48 md:h-48 rounded-full border border-white/15 shadow-2xl shadow-black/50 object-cover ring-4 ring-white/[0.03]"
               />
             </div>
 
@@ -41,12 +41,12 @@ function AboutPage() {
 
         {/* About Section */}
         <div className="space-y-6 md:space-y-8 mb-12 md:mb-10">
-          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300 group">
+          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-8 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-black/20 transition-all duration-300 group">
             <h2 className="text-2xl font-semibold mb-4 text-white">Sobre mí</h2>
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
-                Desarrollador .NET con experiencia en backend y aplicaciones de
-                escritorio, web y multiplataforma.
+                Desarrollador .NET con experiencia en backend y aplicaciones
+                multiplataforma, especialmente de escritorio y móvil.
               </p>
               <p>
                 A lo largo de mi carrera he trabajdo en entornos de alta
@@ -56,9 +56,9 @@ function AboutPage() {
                 migración hacía soluciones modernas, escalables y mantenibles.
               </p>
               <p>
-                He trabajado principalmente en entornos .NET, aunque también
-                tengo experiencia adicional con Node.js y React para el
-                desarrollo de APIs y aplicaciones web.
+                He trabajado principalmente con el stack tecnológico de .NET,
+                aunque también tengo experiencia adicional con Node.js y React
+                para el desarrollo de aplicaciones web.
               </p>
               <p>
                 Compagino mi vida profesional con el deporte de competición, una
@@ -68,22 +68,16 @@ function AboutPage() {
                 como desarrollador, especialmente en contextos de presión o con
                 alta carga técnica.
               </p>
-              <p>
-                Valoro entornos de trabajo que fomenten el equilibrio, la mejora
-                continua y el bienestar del equipo, convencido de que estos
-                factores son clave para construir soluciones sólidas y
-                sostenibles a largo plazo.
-              </p>
             </div>
           </div>
         </div>
 
         {/* Education Section */}
         <div className="mb-10 md:mb-10">
-          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300">
+          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-8 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-black/20 transition-all duration-300">
             <h2 className="text-2xl font-semibold mb-6 text-white">Estudios</h2>
             <div className="space-y-4">
-              <div className="border-l-2 border-blue-700 pl-4">
+              <div className="border-l-2 border-white/25 pl-4">
                 <h3 className="text-lg font-semibold text-white">
                   Desarrollo de aplicaciones multiplataforma
                 </h3>
@@ -92,7 +86,7 @@ function AboutPage() {
                 </p>
               </div>
 
-              <div className="border-l-2 border-blue-700 pl-4">
+              <div className="border-l-2 border-white/25 pl-4">
                 <h3 className="text-lg font-semibold text-white">
                   Desarrollo de aplicaciones web
                 </h3>
@@ -101,7 +95,7 @@ function AboutPage() {
                 </p>
               </div>
 
-              <div className="border-l-2 border-blue-700 pl-4">
+              <div className="border-l-2 border-white/25 pl-4">
                 <h3 className="text-lg font-semibold text-white">
                   Sistemas microinformáticos y redes
                 </h3>
@@ -110,7 +104,7 @@ function AboutPage() {
                 </p>
               </div>
 
-              <div className="border-l-2 border-blue-700 pl-4">
+              <div className="border-l-2 border-white/25 pl-4">
                 <h3 className="text-lg font-semibold text-white">
                   Trinity College London Grade 8 (B2.2)
                 </h3>
@@ -122,12 +116,73 @@ function AboutPage() {
           </div>
         </div>
 
+        {/* Complementary Training Section */}
+        <div className="mb-10">
+          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-8 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-black/20 transition-all duration-300">
+            <h2 className="text-2xl font-semibold mb-6 text-white">
+              Formación complementaria
+            </h2>
+            <div className="grid gap-8 md:grid-cols-2">
+              <article className="border-l-2 border-white/25 pl-4">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h3 className="text-lg font-semibold text-white">
+                    Curso completo de JavaScript
+                  </h3>
+                  <span className="rounded-full border border-white/10 px-2.5 py-1 text-xs text-zinc-400">
+                    70 h
+                  </span>
+                </div>
+                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-zinc-400 marker:text-zinc-600">
+                  <li>Fundamentos del lenguaje</li>
+                  <li>Manipulación del DOM</li>
+                  <li>Programación orientada a objetos</li>
+                  <li>Programación asíncrona</li>
+                </ul>
+                <a
+                  href="https://www.udemy.com/course/the-complete-javascript-course"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm text-zinc-300 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Ver curso en Udemy
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+
+              <article className="border-l-2 border-white/25 pl-4">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h3 className="text-lg font-semibold text-white">
+                    Desarrollo de APIs con Node.js y MongoDB
+                  </h3>
+                  <span className="rounded-full border border-white/10 px-2.5 py-1 text-xs text-zinc-400">
+                    40 h
+                  </span>
+                </div>
+                <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed text-zinc-400 marker:text-zinc-600">
+                  <li>Desarrollo backend con Express y Mongoose</li>
+                  <li>Autenticación con JWT</li>
+                  <li>Seguridad, cifrado y saneamiento de datos</li>
+                </ul>
+                <a
+                  href="https://www.udemy.com/course/nodejs-express-mongodb-bootcamp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-2 text-sm text-zinc-300 underline decoration-white/20 underline-offset-4 transition-colors hover:text-white hover:decoration-white/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                >
+                  Ver curso en Udemy
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+
         {/* Technologies Section */}
-        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/50 transition-all duration-300">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-8 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-black/20 transition-all duration-300">
           <h2 className="text-2xl font-semibold mb-8 text-white">
             Stack Tecnológico
           </h2>
-          <div className="space-y-6">
+          <div className="space-y-5">
             {categories.map((category) => (
               <div key={category}>
                 <h3 className="text-sm font-semibold text-zinc-500 uppercase tracking-wider mb-3">
@@ -139,7 +194,7 @@ function AboutPage() {
                     .map((tech, index) => (
                       <span
                         key={index}
-                        className="px-4 py-2 bg-blue-900/30 border border-blue-800/50 rounded-lg text-sm text-cyan-100 hover:bg-blue-800/40 hover:border-blue-600 hover:scale-105 hover:shadow-md hover:shadow-blue-700/30 transition-all duration-200 cursor-default"
+                        className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm text-zinc-300 transition-colors duration-200 hover:border-white/20 hover:bg-white/[0.08] hover:text-zinc-100 cursor-default"
                       >
                         {tech.name}
                       </span>

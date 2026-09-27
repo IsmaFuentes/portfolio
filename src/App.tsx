@@ -20,7 +20,7 @@ function App() {
   }, [target, navigate]);
 
   return (
-    <div className="bg-gradient-to-br from-blue-950 via-black to-cyan-950 text-white min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-transparent text-zinc-100">
       <NavigationBar />
       <main className="flex-grow">
         <Routes>

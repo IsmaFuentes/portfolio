@@ -3,7 +3,8 @@ export type TechnologyCategory =
   | "Frontend"
   | "Database"
   | "Desktop"
-  | "Mobile";
+  | "Mobile"
+  | "Multiplatform";
 
 export type Technology = {
   name: string;

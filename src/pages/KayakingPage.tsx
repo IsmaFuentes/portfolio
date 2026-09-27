@@ -17,13 +17,13 @@ function KayakingPage() {
       image: editorVelocidad,
       title: "Editor principal - Visualización de velocidad",
       description:
-        "Interfaz principal mostrando la visualización de velocidad. Incluye controles de zoom, navegación y capacidad de multi-recorte para analizar múltiples zonas de interés en una misma sesión.",
+        "Interfaz principal que visualiza la sesión de entrenamiento a partir de los datos de velocidad y distancia. Incluye controles de zoom, navegación y capacidad de multi-recorte para analizar múltiples zonas de interés en una misma sesión.",
     },
     {
       image: editorAceleracion,
       title: "Editor principal - Visualización de aceleración",
       description:
-        "Vista alternativa del editor mostrando datos de aceleración.",
+        "Vista alternativa del editor basada en los datos de aceleración.",
     },
     {
       image: zonas,
@@ -41,7 +41,7 @@ function KayakingPage() {
       image: api,
       title: "Integración con la web de la federación",
       description:
-        "Integración directa con el sistema web de la Federación Balear de Piragüismo para la subida de ficheros CSV procesados.",
+        "Integración directa con el sistema web de la Federación. Una vez realizado el recorte y aplicado el análisis de datos de paleo, la aplicación permite subir los resultados en formato CSV.",
     },
     {
       image: analitica,
@@ -53,31 +53,30 @@ function KayakingPage() {
       image: informesDropdown,
       title: "Menú de selección de informes",
       description:
-        "Dropdown que permite al usuario elegir entre generar un informe general de toda la sesión o por parciales.",
+        "Permite al usuario elegir entre los diferentes tipos de informes disponibles, como el informe general de la sesión o los informes detallados por parciales.",
     },
     {
       image: informesGeneral,
       title: "Informe general de la sesión",
       description:
-        "Informe completo que muestra las estadísticas globales, incluyendo métricas principales como tiempo, velocidad, paleo y desviación de la embarcación durante el recorrido.",
+        "Informe completo que muestra las estadísticas globales, incluyendo métricas principales como tiempo, velocidad, paleo y desviación de la embarcación durante el recorrido. Incluye también el análisis de escora, cabeceo y desviación de la embarcación.",
     },
     {
       image: informesParciales,
       title: "Informe detallado por parcial",
       description:
-        "Informe específico por parciales. Analiza cada segmento de la sesión de forma individual.",
+        "Informe específico por parciales. Analiza cada segmento de la sesión de forma individual para facilitar su comparación.",
     },
     {
       image: comparative,
       title: "Comparativa de sesiones",
       description:
-        "Funcionalidad que permite comparar diferentes sesiones de entrenamiento para identificar mejoras y áreas de oportunidad. Permite alternar entre velocidad, avance y paladas por minuto.",
+        "Permite comparar diferentes sesiones de entrenamiento para identificar mejoras y áreas de oportunidad. Permite visualizar los datos de velocidad, avance por palada y paladas por minuto.",
     },
     {
       image: bw,
       title: "Interfaz con modo claro",
-      description:
-        "Diseño adaptable que incluye tanto modo claro como oscuro, optimizado para largas sesiones de análisis sin fatiga visual en cualquier condición de iluminación.",
+      description: "Diseño adaptable que incluye los modos claro y oscuro.",
     },
   ];
 
@@ -102,12 +101,12 @@ function KayakingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
+    <div className="min-h-screen bg-transparent">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20">
         {/* Back Button */}
         <Link
           to="/projects"
-          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8 transition-colors"
+          className="inline-flex items-center text-zinc-300 hover:text-white mb-8 transition-colors"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -128,7 +127,7 @@ function KayakingPage() {
         {/* Header */}
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
-            <span className="px-3 py-1 bg-blue-900/30 border border-blue-800/50 rounded-full text-xs text-cyan-300">
+            <span className="px-3 py-1 bg-white/[0.06] border border-white/10 rounded-full text-xs text-zinc-300">
               En desarrollo
             </span>
             <span className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
@@ -144,7 +143,7 @@ function KayakingPage() {
         </div>
 
         {/* Overview */}
-        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold text-white mb-4">
             Caso de estudio
           </h2>
@@ -173,7 +172,7 @@ function KayakingPage() {
         </div>
 
         {/* Latest Features Highlight */}
-        {/* <div className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 backdrop-blur-sm border border-cyan-800/50 rounded-2xl p-6 md:p-8 mb-12">
+        {/* <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold mb-6">Mejoras recientes</h2>
           <div className="space-y-4">
             <div className="flex items-start">
@@ -220,7 +219,7 @@ function KayakingPage() {
         </div> */}
 
         {/* Key Features */}
-        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold text-white mb-6">
             Funcionalidades
           </h2>
@@ -228,7 +227,7 @@ function KayakingPage() {
             {keyFeatures.map((feature, i) => (
               <div key={i} className="flex items-start">
                 <svg
-                  className="w-5 h-5 mt-0.5 mr-3 text-cyan-400 flex-shrink-0"
+                  className="w-5 h-5 mt-0.5 mr-3 text-zinc-200 flex-shrink-0"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -246,7 +245,7 @@ function KayakingPage() {
 
         {/* Technical Highlights */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8">
+          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
             <h3 className="text-xl font-semibold text-white mb-4">
               Optimización de rendimiento
             </h3>
@@ -265,7 +264,7 @@ function KayakingPage() {
             </p>
           </div>
 
-          <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8">
+          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
             <h3 className="text-xl font-semibold text-white mb-4">
               Accesibilidad y usabilidad
             </h3>
@@ -287,7 +286,7 @@ function KayakingPage() {
         </div>
 
         {/* Technologies */}
-        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold text-white mb-6">
             Tecnologías
           </h2>
@@ -295,7 +294,7 @@ function KayakingPage() {
             {techStack.map((tech, i) => (
               <span
                 key={i}
-                className="px-4 py-2 bg-blue-900/30 border border-blue-800/50 rounded-lg text-sm text-cyan-200"
+                className="px-4 py-2 bg-white/[0.04] border border-white/10 rounded-lg text-sm text-zinc-300"
               >
                 {tech}
               </span>
@@ -310,7 +309,7 @@ function KayakingPage() {
             {screenshots.map((screenshot, index) => (
               <div
                 key={index}
-                className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl overflow-hidden hover:border-blue-700 transition-all duration-300"
+                className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
               >
                 <div className="overflow-hidden">
                   <img
@@ -333,7 +332,7 @@ function KayakingPage() {
         </div>
 
         {/* Acknowledgments */}
-        <div className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-6 md:p-8 mb-12">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
           <h2 className="text-2xl font-semibold text-white mb-4">
             Agradecimientos
           </h2>
@@ -346,7 +345,7 @@ function KayakingPage() {
         </div>
 
         {/* Results */}
-        <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 backdrop-blur-sm border border-blue-800/50 rounded-2xl p-6 md:p-8">
+        <div className="bg-white/[0.06] backdrop-blur-sm border border-white/15 rounded-2xl p-6 md:p-8">
           <h2 className="text-2xl font-semibold text-white mb-4">Resultado</h2>
           <p className="text-zinc-200 leading-relaxed text-lg">
             El resultado ha sido una aplicación más rápida, mantenible e

@@ -4,7 +4,7 @@ function GitHubLink({ url }: { url?: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center gap-2 px-4 py-2 bg-blue-950/30 border border-blue-900/50 rounded-lg hover:border-cyan-600 hover:bg-blue-900/30 transition-all duration-300"
+      className="group flex items-center gap-2 px-4 py-2 bg-white/[0.035] border border-white/10 rounded-lg hover:border-white/25 hover:bg-white/[0.08] transition-all duration-300"
     >
       <svg
         className="w-5 h-5 text-zinc-400 group-hover:text-zinc-100 transition-colors"

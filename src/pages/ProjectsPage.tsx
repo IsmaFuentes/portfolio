@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950/50 via-black to-cyan-950/50">
+    <div className="min-h-screen bg-transparent">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-20">
         {/* Header */}
         <div className="mb-10 md:mb-16">
@@ -20,14 +20,14 @@ function ProjectsPage() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-blue-950/30 backdrop-blur-sm border border-blue-900/50 rounded-2xl p-5 md:p-8 hover:border-blue-700 hover:shadow-lg hover:shadow-blue-900/30 transition-all duration-300 group flex flex-col"
+              className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-5 md:p-8 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-xl hover:shadow-black/20 transition-all duration-300 group flex flex-col"
             >
               {/* Category & Status */}
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
                   {project.category}
                 </span>
-                <span className="px-3 py-1 bg-blue-900/30 border border-blue-800/50 rounded-full text-xs text-cyan-300">
+                <span className="px-3 py-1 bg-white/[0.06] border border-white/10 rounded-full text-xs text-zinc-300">
                   {project.status}
                 </span>
               </div>
@@ -69,12 +69,12 @@ function ProjectsPage() {
               </div>
 
               {/* Tech Stack */}
-              <div className="pt-4 border-t border-blue-900/50">
+              <div className="pt-4 border-t border-white/10">
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-blue-900/30 border border-blue-800/50 rounded-lg text-xs text-cyan-200"
+                      className="px-3 py-1 bg-white/[0.04] border border-white/10 rounded-lg text-xs text-zinc-300"
                     >
                       {tech}
                     </span>
@@ -84,10 +84,10 @@ function ProjectsPage() {
 
               {/* View Details Link - Only for Kayaking project */}
               {project.viewLink && (
-                <div className="mt-4 pt-4 border-t border-blue-900/50">
+                <div className="mt-4 pt-4 border-t border-white/10">
                   <Link
                     to={project.viewLink}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
+                    className="inline-flex items-center text-zinc-200 hover:text-white transition-colors group"
                   >
                     <span className="font-medium">
                       Ver detalles del proyecto
