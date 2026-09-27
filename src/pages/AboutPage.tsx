@@ -68,6 +68,11 @@ function AboutPage() {
                 como desarrollador, especialmente en contextos de presión o con
                 alta carga técnica.
               </p>
+              <p>
+                Actualmente trabajo como entrenador de piragüismo, y dedico
+                parte de mi tiempo a desarrollar herramientas relacionadas con
+                el deporte de alto rendimiento.
+              </p>
             </div>
           </div>
         </div>
