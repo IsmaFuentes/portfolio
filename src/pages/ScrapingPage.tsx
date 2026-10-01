@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import ImageGallery from "../components/ImageGallery";
 import hljs from "highlight.js/lib/core";
 import csharp from "highlight.js/lib/languages/csharp";
 import appScreenshot from "../assets/scraping/1-app.png";
@@ -168,22 +168,6 @@ namespace WebScraper.CORE.Implementation.Drivers
         "La aplicación procesa la tienda en un navegador junto a la interfaz de seguimiento.",
     },
   ];
-  const [expandedScreenshot, setExpandedScreenshot] = useState<
-    (typeof screenshots)[number] | null
-  >(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
-
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    if (expandedScreenshot && !dialog.open) {
-      dialog.showModal();
-    } else if (!expandedScreenshot && dialog.open) {
-      dialog.close();
-    }
-  }, [expandedScreenshot]);
-
   return (
     <div className="min-h-screen bg-transparent">
       <div className="mx-auto max-w-6xl px-4 py-10 md:px-8 md:py-14">
@@ -353,87 +337,7 @@ namespace WebScraper.CORE.Implementation.Drivers
           </div>
         </section>
 
-        <section>
-          <h2 className="mb-5 text-2xl font-semibold text-white">Galería</h2>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {screenshots.map((screenshot) => (
-              <figure
-                key={screenshot.title}
-                className="overflow-hidden rounded-xl border border-white/10 bg-white/[0.035]"
-              >
-                <button
-                  type="button"
-                  onClick={() => setExpandedScreenshot(screenshot)}
-                  aria-label={`Ampliar imagen: ${screenshot.title}`}
-                  className="group block w-full cursor-zoom-in text-left focus-visible:outline-2 focus-visible:outline-white"
-                >
-                  <div className="flex aspect-video items-center justify-center overflow-hidden bg-black/30 p-2">
-                    <img
-                      src={screenshot.image}
-                      alt=""
-                      loading="lazy"
-                      className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
-                    />
-                  </div>
-                </button>
-                <figcaption className="p-4">
-                  <h3 className="mb-1 text-base font-semibold text-white">
-                    {screenshot.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-zinc-400">
-                    {screenshot.description}
-                  </p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </section>
-
-        <dialog
-          ref={dialogRef}
-          aria-label={expandedScreenshot?.title}
-          onClose={() => setExpandedScreenshot(null)}
-          onClick={(event) => {
-            if (event.target === event.currentTarget) {
-              setExpandedScreenshot(null);
-            }
-          }}
-          className="fixed inset-0 m-auto max-h-[94dvh] max-w-[96vw] overflow-visible rounded-xl border border-white/15 bg-zinc-950 p-3 text-white shadow-2xl backdrop:bg-black/85 md:max-w-[90vw]"
-        >
-          {expandedScreenshot && (
-            <figure className="relative">
-              <button
-                type="button"
-                onClick={() => setExpandedScreenshot(null)}
-                aria-label="Cerrar imagen ampliada"
-                className="absolute right-2 top-2 z-10 rounded-md border border-white/20 bg-black/70 p-2 text-white transition-colors hover:bg-black focus-visible:outline-2 focus-visible:outline-white"
-              >
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-              <img
-                src={expandedScreenshot.image}
-                alt={expandedScreenshot.title}
-                className="max-h-[80dvh] max-w-[90vw] object-contain"
-              />
-              <figcaption className="pt-3 text-sm text-zinc-300">
-                {expandedScreenshot.title}
-              </figcaption>
-            </figure>
-          )}
-        </dialog>
+        <ImageGallery images={screenshots} />
       </div>
     </div>
   );
