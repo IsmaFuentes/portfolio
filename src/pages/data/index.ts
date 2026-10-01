@@ -151,11 +151,12 @@ export const projects: Project[] = [
       ".NET 8",
       "WPF / WinForms",
       "MVVM",
-      "Puppeteer",
+      "PuppeteerSharp",
       "DevExpress",
       "ProxyScrape",
     ],
     category: "Automatización",
+    viewLink: "/projects/scraping",
   },
   {
     title: "Kuara Software / Laberït - Sistema OCR de Facturación",

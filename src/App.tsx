@@ -6,6 +6,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 import KayakingPage from "./pages/KayakingPage";
+import ScrapingPage from "./pages/ScrapingPage";
 
 function App() {
   const params = new URLSearchParams(window.location.search);
@@ -16,6 +17,11 @@ function App() {
     if (target === "kayaking") {
       window.history.replaceState({}, document.title, window.location.pathname);
       navigate("/projects/kayaking", { replace: true });
+    }
+
+    if (target === "scraping") {
+      window.history.replaceState({}, document.title, window.location.pathname);
+      navigate("/projects/scraping", { replace: true });
     }
   }, [target, navigate]);
 
@@ -28,6 +34,7 @@ function App() {
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/projects/kayaking" element={<KayakingPage />} />
+          <Route path="/projects/scraping" element={<ScrapingPage />} />
         </Routes>
       </main>
       <Footer />

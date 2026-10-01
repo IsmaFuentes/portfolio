@@ -189,3 +189,33 @@
     animation: none;
   }
 }
+
+@layer components {
+  .code-highlight .hljs-keyword,
+  .code-highlight .hljs-literal,
+  .code-highlight .hljs-meta {
+    color: #c4b5fd;
+  }
+
+  .code-highlight .hljs-string,
+  .code-highlight .hljs-attr {
+    color: #a5d6a7;
+  }
+
+  .code-highlight .hljs-title,
+  .code-highlight .hljs-type,
+  .code-highlight .hljs-built_in {
+    color: #f0b37e;
+  }
+
+  .code-highlight .hljs-number,
+  .code-highlight .hljs-variable,
+  .code-highlight .hljs-params {
+    color: #79c0ff;
+  }
+
+  .code-highlight .hljs-comment {
+    color: #858b98;
+    font-style: italic;
+  }
+}
