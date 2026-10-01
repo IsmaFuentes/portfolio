@@ -102,11 +102,11 @@ function KayakingPage() {
 
   return (
     <div className="min-h-screen bg-transparent">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-10 md:py-14">
         {/* Back Button */}
         <Link
           to="/projects"
-          className="inline-flex items-center text-zinc-300 hover:text-white mb-8 transition-colors"
+          className="inline-flex items-center text-sm text-zinc-400 hover:text-white mb-6 transition-colors"
         >
           <svg
             className="w-5 h-5 mr-2"
@@ -125,7 +125,7 @@ function KayakingPage() {
         </Link>
 
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-8">
           <div className="flex items-center gap-3 mb-4">
             <span className="px-3 py-1 bg-white/[0.06] border border-white/10 rounded-full text-xs text-zinc-300">
               En desarrollo
@@ -134,20 +134,20 @@ function KayakingPage() {
               Deportivo
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+          <h1 className="max-w-4xl text-4xl md:text-5xl font-bold mb-4 text-white">
             Análisis de datos aplicados al Piragüismo
           </h1>
-          <p className="text-zinc-300 text-lg md:text-xl leading-relaxed">
+          <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
             Desarrollo colaborativo con la Federación Balear de Piragüismo
           </p>
         </div>
 
         {/* Overview */}
-        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-white mb-4">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-3">
             Caso de estudio
           </h2>
-          <div className="space-y-4 text-zinc-300 leading-relaxed">
+          <div className="space-y-3 text-sm md:text-base text-zinc-400 leading-relaxed">
             <p>
               La Federación Balear, entidad pionera en España en el ámbito de
               análisis de datos GPS aplicados al piragüismo, disponía de una
@@ -171,59 +171,12 @@ function KayakingPage() {
           </div>
         </div>
 
-        {/* Latest Features Highlight */}
-        {/* <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
-          <h2 className="text-2xl font-semibold mb-6">Mejoras recientes</h2>
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  Visualización de velocidad y aceleración
-                </h3>
-                <p className="text-zinc-300 leading-relaxed">
-                  El editor permite alternar entre visualización de velocidad y
-                  aceleración, con el fin de facilitar la detección de zonas de
-                  esfuerzo para su posterior recorte y análisis.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  Sistema de multi-recorte
-                </h3>
-                <p className="text-zinc-300 leading-relaxed">
-                  La aplicación soporta la creación de múltiples zonas de
-                  recorte en una misma sesión, permitiendo analizar varios
-                  parciales independientes sin necesidad de procesar el archivo
-                  múltiples veces.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  Comportamiento de la embarcación
-                </h3>
-                <p className="text-zinc-300 leading-relaxed">
-                  Se han incluido los datos de cabeceo y escora de la
-                  embarcación a lo largo del recorrido, proporcionando
-                  información adicional sobre su comportamiento durante la
-                  sesión.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         {/* Key Features */}
-        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-white mb-6">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-4">
             Funcionalidades
           </h2>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-x-6 gap-y-3">
             {keyFeatures.map((feature, i) => (
               <div key={i} className="flex items-start">
                 <svg
@@ -237,26 +190,26 @@ function KayakingPage() {
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="text-zinc-300">{feature}</span>
+                <span className="text-sm text-zinc-300">{feature}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* Technical Highlights */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
-            <h3 className="text-xl font-semibold text-white mb-4">
+        <div className="grid md:grid-cols-2 gap-4 mb-8">
+          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">
               Optimización de rendimiento
             </h3>
-            <p className="text-zinc-300 leading-relaxed mb-3">
+            <p className="text-sm text-zinc-400 leading-relaxed mb-3">
               Para garantizar una visualización fluida con archivos CSV de gran
               tamaño, en este caso archivos de más de 100mb y 500.000 puntos, se
               implementó una estrategia de reducción de datos orientada a la
               visualización.
             </p>
 
-            <p className="text-zinc-300 leading-relaxed mb-3">
+            <p className="text-sm text-zinc-400 leading-relaxed mb-3">
               El muestreo original del dispositivo WIMU es de 10ms, mientras que
               para la representación gráfica se ha incrementado a 100ms, lo que
               reduce significativamente la cantidad de puntos a procesar sin
@@ -264,21 +217,21 @@ function KayakingPage() {
             </p>
           </div>
 
-          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
-            <h3 className="text-xl font-semibold text-white mb-4">
+          <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">
               Accesibilidad y usabilidad
             </h3>
-            <p className="text-zinc-300 leading-relaxed mb-3">
+            <p className="text-sm text-zinc-400 leading-relaxed mb-3">
               La interfaz se diseñó para ser intuitiva y fácil de usar, con
               controles claros para la selección de archivos, recorte y
               visualización de datos.
             </p>
-            <p className="text-zinc-300 leading-relaxed mb-3">
+            <p className="text-sm text-zinc-400 leading-relaxed mb-3">
               Soporta los modos claro y oscuro para adaptarse a las preferencias
               del usuario y facilitar el trabajo en diferentes condiciones de
               iluminación.
             </p>
-            <p className="text-zinc-300 leading-relaxed">
+            <p className="text-sm text-zinc-400 leading-relaxed">
               El funcionamiento de la aplicación es completamente offline, lo
               que facilita su uso en entornos con conectividad limitada.
             </p>
@@ -286,15 +239,13 @@ function KayakingPage() {
         </div>
 
         {/* Technologies */}
-        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-white mb-6">
-            Tecnologías
-          </h2>
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-4">Tecnologías</h2>
           <div className="flex flex-wrap gap-3">
             {techStack.map((tech, i) => (
               <span
                 key={i}
-                className="px-4 py-2 bg-white/[0.04] border border-white/10 rounded-lg text-sm text-zinc-300"
+                className="px-3 py-1.5 bg-white/[0.04] border border-white/10 rounded-lg text-xs text-zinc-300"
               >
                 {tech}
               </span>
@@ -303,26 +254,27 @@ function KayakingPage() {
         </div>
 
         {/* Screenshots */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-semibold text-white mb-8">Galería</h2>
-          <div className="space-y-8">
+        <div className="mb-8">
+          <h2 className="text-2xl font-semibold text-white mb-5">Galería</h2>
+          <div className="grid gap-4 sm:grid-cols-2">
             {screenshots.map((screenshot, index) => (
               <div
                 key={index}
-                className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300"
+                className="group overflow-hidden rounded-xl border border-white/10 bg-white/[0.035] transition-colors duration-300 hover:border-white/20 hover:bg-white/[0.05]"
               >
-                <div className="overflow-hidden">
+                <div className="flex aspect-video items-center justify-center overflow-hidden bg-black/30 p-2">
                   <img
                     src={screenshot.image}
                     alt={screenshot.title}
-                    className="w-full h-auto scale-101"
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
-                <div className="p-6 md:p-8">
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                <div className="p-4">
+                  <h3 className="text-base font-semibold text-white mb-2">
                     {screenshot.title}
                   </h3>
-                  <p className="text-zinc-300 leading-relaxed">
+                  <p className="text-sm text-zinc-400 leading-relaxed">
                     {screenshot.description}
                   </p>
                 </div>
@@ -332,11 +284,11 @@ function KayakingPage() {
         </div>
 
         {/* Acknowledgments */}
-        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-white mb-4">
+        <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">
+          <h2 className="text-xl font-semibold text-white mb-3">
             Agradecimientos
           </h2>
-          <p className="text-zinc-300 leading-relaxed">
+          <p className="text-sm text-zinc-400 leading-relaxed">
             Este proyecto no habría sido posible sin la colaboración y el apoyo
             de Carlos Badiola, desarrollador original de la aplicación en
             MATLAB. Su trabajo sentó las bases que permitieron la evolución de
@@ -345,9 +297,9 @@ function KayakingPage() {
         </div>
 
         {/* Results */}
-        <div className="bg-white/[0.06] backdrop-blur-sm border border-white/15 rounded-2xl p-6 md:p-8">
-          <h2 className="text-2xl font-semibold text-white mb-4">Resultado</h2>
-          <p className="text-zinc-200 leading-relaxed text-lg">
+        <div className="bg-white/[0.06] backdrop-blur-sm border border-white/15 rounded-xl p-5 md:p-6">
+          <h2 className="text-xl font-semibold text-white mb-3">Resultado</h2>
+          <p className="text-zinc-200 leading-relaxed">
             El resultado ha sido una aplicación más rápida, mantenible e
             intuitiva, que ha sido muy bien recibida por la federación,
             contribuyendo a mejorar el análisis de datos GPS en el ámbito del
