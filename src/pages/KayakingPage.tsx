@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ImageGallery from "../components/ImageGallery";
+import ProjectMetrics from "../components/ProjectMetrics";
 import editorAceleracion from "../assets/apex/1-editor-aceleracion.png";
 import editorVelocidad from "../assets/apex/1-editor-velocidad.png";
 import zonas from "../assets/apex/3-zonas.png";
@@ -142,6 +143,14 @@ function KayakingPage() {
           </p>
         </div>
 
+        <ProjectMetrics
+          items={[
+            { value: "100+ MB", label: "Tamaño de CSV" },
+            { value: "500.000", label: "Puntos por sesión" },
+            { value: "10", label: "Parciales analizables" },
+          ]}
+        />
+
         {/* Overview */}
         <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">
           <h2 className="text-xl font-semibold text-white mb-3">
@@ -170,6 +179,8 @@ function KayakingPage() {
             </p>
           </div>
         </div>
+
+        <ImageGallery images={screenshots} />
 
         {/* Key Features */}
         <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">
@@ -252,8 +263,6 @@ function KayakingPage() {
             ))}
           </div>
         </div>
-
-        <ImageGallery images={screenshots} />
 
         {/* Acknowledgments */}
         <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">

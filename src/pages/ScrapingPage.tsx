@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import ImageGallery from "../components/ImageGallery";
+import ProjectMetrics from "../components/ProjectMetrics";
 import hljs from "highlight.js/lib/core";
 import csharp from "highlight.js/lib/languages/csharp";
 import appScreenshot from "../assets/scraping/1-app.png";
@@ -209,6 +210,14 @@ namespace WebScraper.CORE.Implementation.Drivers
           </p>
         </header>
 
+        <ProjectMetrics
+          items={[
+            { value: "10", label: "Comercios online" },
+            { value: "4", label: "Instancias en paralelo" },
+            { value: "Proxies", label: "Rotación de proxies con ProxyScrape" },
+          ]}
+        />
+
         <section className="mb-8 rounded-xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-sm md:p-6">
           <h2 className="mb-3 text-xl font-semibold text-white">El proyecto</h2>
           <div className="space-y-3 text-sm leading-relaxed text-zinc-400 md:text-base">
@@ -226,6 +235,8 @@ namespace WebScraper.CORE.Implementation.Drivers
             </p>
           </div>
         </section>
+
+        <ImageGallery images={screenshots} />
 
         <section className="mb-8 rounded-xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-sm md:p-6">
           <h2 className="mb-4 text-xl font-semibold text-white">
@@ -336,8 +347,6 @@ namespace WebScraper.CORE.Implementation.Drivers
             ))}
           </div>
         </section>
-
-        <ImageGallery images={screenshots} />
       </div>
     </div>
   );
