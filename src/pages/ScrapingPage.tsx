@@ -236,8 +236,6 @@ namespace WebScraper.CORE.Implementation.Drivers
           </div>
         </section>
 
-        <ImageGallery images={screenshots} />
-
         <section className="mb-8 rounded-xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-sm md:p-6">
           <h2 className="mb-4 text-xl font-semibold text-white">
             Funcionalidades
@@ -262,6 +260,8 @@ namespace WebScraper.CORE.Implementation.Drivers
             ))}
           </div>
         </section>
+
+        <ImageGallery images={screenshots} />
 
         <section className="mb-8 grid gap-4 md:grid-cols-2">
           <article className="rounded-xl border border-white/10 bg-white/[0.035] p-5 backdrop-blur-sm md:p-6">

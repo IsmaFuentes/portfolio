@@ -83,10 +83,10 @@ function KayakingPage() {
   ];
   const keyFeatures = [
     "Recorte con visualización alternativa entre velocidad y aceleración",
-    "Recorte en parciales o LAPS para análisis detallado",
-    "Vista comparativa de sesiones para análisis de evolución",
+    "Recorte en parciales para análisis detallado",
+    "Vista comparativa para distintas sesiones",
     "Algoritmo inteligente de detección de zonas de esfuerzo",
-    "Cálculo de métricas avanzadas de paleo",
+    "Cálculo y análisis de métricas avanzadas de paleo",
     "Informes analíticos por sesión, parciales y comparativos",
     "Alto rendimiento con archivos CSV de gran tamaño",
     "Interfaz intuitiva con soporte para modo claro y oscuro",
@@ -145,7 +145,7 @@ function KayakingPage() {
 
         <ProjectMetrics
           items={[
-            { value: "100+ MB", label: "Tamaño de CSV" },
+            { value: "CSV", label: "Hasta 100mb o más" },
             { value: "500.000", label: "Puntos por sesión" },
             { value: "10", label: "Parciales analizables" },
           ]}
@@ -160,16 +160,15 @@ function KayakingPage() {
             <p>
               La Federación Balear, entidad pionera en España en el ámbito de
               análisis de datos GPS aplicados al piragüismo, disponía de una
-              aplicación de escritorio desarrollada en MATLAB, que aunque
-              funcional, presentaba problemas de rendimiento, era difícil de
-              usar y su mantenibilidad era limitada, lo que dificultaba su uso y
-              evolución.
+              aplicación de escritorio desarrollada en MATLAB que procesaba y
+              analizaba datos extraídos de dispostivos WIMU.
             </p>
             <p>
-              El objetivo de este proyecto ha sido el de ofrecer una solución de
-              alto rendimiento que pudiese reemplazar a la aplicación anterior,
-              manteniendo la compatibilidad con los flujos de trabajo
-              existentes.
+              Sin embargo, presentaba problemas de rendimiento, era difícil de
+              usar y su mantenibilidad era limitada, lo que dificultaba su uso y
+              evolución. Esta situación motivó el desarrollo de una nueva
+              aplicación que superara estas limitaciones y ofreciese una mejor
+              experiencia de usuario.
             </p>
             <p>
               El resultado ha sido una aplicación más rápida, intuitiva y fácil
@@ -179,8 +178,6 @@ function KayakingPage() {
             </p>
           </div>
         </div>
-
-        <ImageGallery images={screenshots} />
 
         {/* Key Features */}
         <div className="bg-white/[0.035] backdrop-blur-sm border border-white/10 rounded-xl p-5 md:p-6 mb-8">
@@ -206,6 +203,8 @@ function KayakingPage() {
             ))}
           </div>
         </div>
+
+        <ImageGallery images={screenshots} />
 
         {/* Technical Highlights */}
         <div className="grid md:grid-cols-2 gap-4 mb-8">

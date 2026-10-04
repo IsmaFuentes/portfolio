@@ -45,10 +45,10 @@ function AboutPage() {
             <h2 className="mb-4 text-2xl font-semibold text-white">Sobre mí</h2>
             <div className="grid gap-4 text-zinc-300 leading-relaxed md:grid-cols-2 md:gap-8">
               <p>
-                Desarrollador .NET con experiencia en backend y aplicaciones
-                multiplataforma, con experiencia adicional en Node.js y React.
-                He trabajado en sistemas complejos, modernizando bases de código
-                y evolucionándolas hacia soluciones más mantenibles y
+                A lo largo de mi carrera, he trabajado en el desarrollo de
+                sistemas complejos, el mantenimiento de infraestructura
+                empresarial y la modernización de bases de código con alta deuda
+                técnica, evolucionándolas hacia soluciones más mantenibles y
                 escalables.
               </p>
               <p>
