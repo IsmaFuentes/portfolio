@@ -178,6 +178,7 @@ export const projects: Project[] = [
       "Node.js",
     ],
     status: "Completado",
+    viewLink: "/projects/ocr",
     category: "Automatización",
   },
   {
