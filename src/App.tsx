@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import ExperiencePage from "./pages/ExperiencePage";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -8,6 +8,15 @@ import Footer from "./components/Footer";
 import KayakingPage from "./pages/KayakingPage";
 import ScrapingPage from "./pages/ScrapingPage";
 import OcrPage from "./pages/OcrPage";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   const params = new URLSearchParams(window.location.search);
@@ -34,6 +43,7 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col bg-transparent text-zinc-100">
       <NavigationBar />
+      <ScrollToTop />
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<AboutPage />} />
